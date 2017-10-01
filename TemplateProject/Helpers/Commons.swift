@@ -26,12 +26,12 @@ class Commons {
     }
     
     func showAlertOnViewController(_ viewController: UIViewController,
-                                   withTitle title: String?,
-                                   andMessage message: String,
-                                   andMainButton mainButton: String?,
-                                   completionMain mainComplete: ((UIAlertAction)->())?,
-                                   andOtherButton otherButton: String?,
-                                   completionOther otherComplete: ((UIAlertAction)->())?) {
+                                   title: String? = nil,
+                                   message: String,
+                                   mainButton: String,
+                                   mainComplete: @escaping (UIAlertAction)->(),
+                                   otherButton: String? = nil,
+                                   otherComplete: ((UIAlertAction)->())? = nil) {
         let alert: UIAlertController
         
         if title == nil || title == "" {
@@ -40,10 +40,8 @@ class Commons {
             alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         }
         
-        if let mainButton = mainButton {
-            let mainAction = UIAlertAction(title: mainButton, style: .default, handler: mainComplete)
-            alert.addAction(mainAction)
-        }
+        let mainAction = UIAlertAction(title: mainButton, style: .default, handler: mainComplete)
+        alert.addAction(mainAction)
         
         if let otherButton = otherButton {
             let otherAction = UIAlertAction(title: otherButton, style: .cancel, handler: otherComplete)
