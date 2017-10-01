@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import CoreLocation
 
 class Commons {
     
     static let sharedInstance: Commons = Commons()
+    lazy private var locationManager: CLLocationManager = CLLocationManager()
     
     private init() {}
     
@@ -49,6 +51,16 @@ class Commons {
         }
         
         viewController.present(alert, animated: true, completion: nil)
+    }
+    
+    func getLocation() -> CLLocationCoordinate2D {
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager.distanceFilter = kCLDistanceFilterNone
+        self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager.startUpdatingLocation()
+        let location: CLLocation = self.locationManager.location ?? CLLocation()
+        let coordinate = location.coordinate
+        return coordinate
     }
     
 }
