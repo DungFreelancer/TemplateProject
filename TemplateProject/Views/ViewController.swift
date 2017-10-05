@@ -7,18 +7,22 @@
 //
 
 import UIKit
+import PKHUD
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        Log.debug(NetworkHelper.sharedInstance.isConnect ?? "")
+        Log.debug(NetworkHelper.sharedInstance.connectingChange({ (status) in
+            print("Network status \(status)")
+        }))
+        
+
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+  
 
 
 }

@@ -11,6 +11,8 @@
 		E880D09B1F807803002EEB55 /* Logs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880D09A1F807803002EEB55 /* Logs.swift */; };
 		E880D09F1F808D5E002EEB55 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880D09E1F808D5E002EEB55 /* Constants.swift */; };
 		E880D0A11F809F4F002EEB55 /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880D0A01F809F4F002EEB55 /* Commons.swift */; };
+		E8A025041F851F890082DA91 /* UIImageViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A025031F851F890082DA91 /* UIImageViewEx.swift */; };
+		E8A025061F8528610082DA91 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A025051F8528610082DA91 /* NetworkHelper.swift */; };
 		E8B892DD1F7FFF8000DDA048 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B892DC1F7FFF8000DDA048 /* AppDelegate.swift */; };
 		E8B892DF1F7FFF8000DDA048 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B892DE1F7FFF8000DDA048 /* ViewController.swift */; };
 		E8B892E21F7FFF8000DDA048 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B892E01F7FFF8000DDA048 /* Main.storyboard */; };
@@ -25,6 +27,8 @@
 		E880D09A1F807803002EEB55 /* Logs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logs.swift; sourceTree = "<group>"; };
 		E880D09E1F808D5E002EEB55 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E880D0A01F809F4F002EEB55 /* Commons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commons.swift; sourceTree = "<group>"; };
+		E8A025031F851F890082DA91 /* UIImageViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewEx.swift; sourceTree = "<group>"; };
+		E8A025051F8528610082DA91 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		E8B892D91F7FFF8000DDA048 /* TemplateProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TemplateProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B892DC1F7FFF8000DDA048 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8B892DE1F7FFF8000DDA048 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +65,14 @@
 				E8B892E81F7FFF8000DDA048 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E8A025021F851F5E0082DA91 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E8A025031F851F890082DA91 /* UIImageViewEx.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		E8B892D01F7FFF8000DDA048 = {
@@ -108,9 +120,11 @@
 		E8B892F11F80007900DDA048 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				E8A025021F851F5E0082DA91 /* Extension */,
 				E880D09A1F807803002EEB55 /* Logs.swift */,
 				E880D09E1F808D5E002EEB55 /* Constants.swift */,
 				E880D0A01F809F4F002EEB55 /* Commons.swift */,
+				E8A025051F8528610082DA91 /* NetworkHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -268,6 +282,7 @@
 				"${BUILT_PRODUCTS_DIR}/FAPanels/FAPanels.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -277,6 +292,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FAPanels.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -292,6 +308,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8A025061F8528610082DA91 /* NetworkHelper.swift in Sources */,
+				E8A025041F851F890082DA91 /* UIImageViewEx.swift in Sources */,
 				E8B892DF1F7FFF8000DDA048 /* ViewController.swift in Sources */,
 				E8B892DD1F7FFF8000DDA048 /* AppDelegate.swift in Sources */,
 				E880D0A11F809F4F002EEB55 /* Commons.swift in Sources */,
