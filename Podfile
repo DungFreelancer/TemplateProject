@@ -14,4 +14,6 @@ target 'TemplateProject' do
   pod 'SwifterSwift', '~> 4.0'
 
   pod 'SwiftyJSON', '4.0.0-alpha.1'
+
+  pod 'PKHUD', '~> 5.0'
 end
