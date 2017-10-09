@@ -4,19 +4,19 @@ PODS:
   - IQKeyboardManagerSwift (5.0.3)
   - Kingfisher (4.1.0)
   - PKHUD (5.0.0)
-  - SwifterSwift (4.0.0):
-    - SwifterSwift/AppKit (= 4.0.0)
-    - SwifterSwift/CoreGraphics (= 4.0.0)
-    - SwifterSwift/CoreLocation (= 4.0.0)
-    - SwifterSwift/Foundation (= 4.0.0)
-    - SwifterSwift/SwiftStdlib (= 4.0.0)
-    - SwifterSwift/UIKit (= 4.0.0)
-  - SwifterSwift/AppKit (4.0.0)
-  - SwifterSwift/CoreGraphics (4.0.0)
-  - SwifterSwift/CoreLocation (4.0.0)
-  - SwifterSwift/Foundation (4.0.0)
-  - SwifterSwift/SwiftStdlib (4.0.0)
-  - SwifterSwift/UIKit (4.0.0)
+  - SwifterSwift (4.0.1):
+    - SwifterSwift/AppKit (= 4.0.1)
+    - SwifterSwift/CoreGraphics (= 4.0.1)
+    - SwifterSwift/CoreLocation (= 4.0.1)
+    - SwifterSwift/Foundation (= 4.0.1)
+    - SwifterSwift/SwiftStdlib (= 4.0.1)
+    - SwifterSwift/UIKit (= 4.0.1)
+  - SwifterSwift/AppKit (4.0.1)
+  - SwifterSwift/CoreGraphics (4.0.1)
+  - SwifterSwift/CoreLocation (4.0.1)
+  - SwifterSwift/Foundation (4.0.1)
+  - SwifterSwift/SwiftStdlib (4.0.1)
+  - SwifterSwift/UIKit (4.0.1)
   - SwiftyJSON (4.0.0-alpha.1)
 
 DEPENDENCIES:
@@ -34,7 +34,7 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: e257e513744cf32123eca7061272acea0246fc83
   Kingfisher: f14df8cbe576bf55f211fa589e9869bceb4ea87d
   PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
-  SwifterSwift: 0b63ade1ec0c5bc4d6228df993de41fe44bc123e
+  SwifterSwift: 5f406a5f831343312d6d5b34282b57ef3f52c40b
   SwiftyJSON: dc88934f85fb50b263b1632b9cbad3402505783e
 
 PODFILE CHECKSUM: 5a382b6b6a0682979869b6ba9109a6a9beed0e6d
