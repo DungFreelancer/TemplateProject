@@ -7,3 +7,4 @@
 //
 
 import PKHUD
+import Alamofire
