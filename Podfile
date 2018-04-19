@@ -3,15 +3,15 @@ use_frameworks!
 
 target 'TemplateProject' do
 
-  pod 'Alamofire', '~> 4.5'
+  pod 'Alamofire', '~> 4.7'
 
-  pod 'Kingfisher', '~> 4.1'
+  pod 'Kingfisher', '~> 4.7'
 
   pod 'IQKeyboardManagerSwift', '~> 5.0'
 
-  pod 'FAPanels', '~> 0.3'
+  pod 'FAPanels', '~> 0.4'
 
-  pod 'SwifterSwift', '~> 4.0'
+  pod 'SwifterSwift', '~> 4.3'
 
   pod 'SwiftyJSON', '4.0.0-alpha.1'
 

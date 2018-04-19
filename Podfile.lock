@@ -1,42 +1,54 @@
 PODS:
-  - Alamofire (4.5.1)
-  - FAPanels (0.3.3)
-  - IQKeyboardManagerSwift (5.0.3)
-  - Kingfisher (4.1.0)
+  - Alamofire (4.7.2)
+  - FAPanels (0.4.0)
+  - IQKeyboardManagerSwift (5.0.8)
+  - Kingfisher (4.7.0)
   - PKHUD (5.0.0)
-  - SwifterSwift (4.0.1):
-    - SwifterSwift/AppKit (= 4.0.1)
-    - SwifterSwift/CoreGraphics (= 4.0.1)
-    - SwifterSwift/CoreLocation (= 4.0.1)
-    - SwifterSwift/Foundation (= 4.0.1)
-    - SwifterSwift/SwiftStdlib (= 4.0.1)
-    - SwifterSwift/UIKit (= 4.0.1)
-  - SwifterSwift/AppKit (4.0.1)
-  - SwifterSwift/CoreGraphics (4.0.1)
-  - SwifterSwift/CoreLocation (4.0.1)
-  - SwifterSwift/Foundation (4.0.1)
-  - SwifterSwift/SwiftStdlib (4.0.1)
-  - SwifterSwift/UIKit (4.0.1)
+  - SwifterSwift (4.3.0):
+    - SwifterSwift/AppKit (= 4.3.0)
+    - SwifterSwift/CoreGraphics (= 4.3.0)
+    - SwifterSwift/CoreLocation (= 4.3.0)
+    - SwifterSwift/Foundation (= 4.3.0)
+    - SwifterSwift/MapKit (= 4.3.0)
+    - SwifterSwift/SwiftStdlib (= 4.3.0)
+    - SwifterSwift/UIKit (= 4.3.0)
+  - SwifterSwift/AppKit (4.3.0)
+  - SwifterSwift/CoreGraphics (4.3.0)
+  - SwifterSwift/CoreLocation (4.3.0)
+  - SwifterSwift/Foundation (4.3.0)
+  - SwifterSwift/MapKit (4.3.0)
+  - SwifterSwift/SwiftStdlib (4.3.0)
+  - SwifterSwift/UIKit (4.3.0)
   - SwiftyJSON (4.0.0-alpha.1)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.5)
-  - FAPanels (~> 0.3)
+  - Alamofire (~> 4.7)
+  - FAPanels (~> 0.4)
   - IQKeyboardManagerSwift (~> 5.0)
-  - Kingfisher (~> 4.1)
+  - Kingfisher (~> 4.7)
   - PKHUD (~> 5.0)
-  - SwifterSwift (~> 4.0)
+  - SwifterSwift (~> 4.3)
   - SwiftyJSON (= 4.0.0-alpha.1)
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - FAPanels
+    - IQKeyboardManagerSwift
+    - Kingfisher
+    - PKHUD
+    - SwifterSwift
+    - SwiftyJSON
+
 SPEC CHECKSUMS:
-  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  FAPanels: f4374f5625697c2fd27193985e98bcb8a3251033
-  IQKeyboardManagerSwift: e257e513744cf32123eca7061272acea0246fc83
-  Kingfisher: f14df8cbe576bf55f211fa589e9869bceb4ea87d
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  FAPanels: 55928d83dc050bb36db5dbb2d969e7118f425d69
+  IQKeyboardManagerSwift: 2e7dc7f98c111458c1ea2b373f893e8cf95e2b97
+  Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
   PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
-  SwifterSwift: 5f406a5f831343312d6d5b34282b57ef3f52c40b
+  SwifterSwift: f3fce2b9fc5b9d8fda6eec33825e5243c60aebba
   SwiftyJSON: dc88934f85fb50b263b1632b9cbad3402505783e
 
-PODFILE CHECKSUM: 5a382b6b6a0682979869b6ba9109a6a9beed0e6d
+PODFILE CHECKSUM: a451cfd855114aae20682f43dcf748967fb9d7c1
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.0
