@@ -42,17 +42,17 @@ class NetworkHelper {
         }
     }
     
-    func respone(result: Result<Any>, complete: ((_ success: JSON?,_ error: Error?)->())?) {
+    private func respone(result: Result<Any>, complete: ((_ success: JSON?,_ error: Error?)->())?) {
+        guard let complete = complete else {
+            return
+        }
+        
         switch result {
         case .success(let value):
             let json = JSON(value)
-            if let complete = complete {
-                complete(json, nil)
-            }
+            complete(json, nil)
         case .failure(let error):
-            if let complete = complete {
-                complete(nil, error)
-            }
+            complete(nil, error)
         }
     }
     
