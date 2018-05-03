@@ -4,21 +4,6 @@ PODS:
   - IQKeyboardManagerSwift (5.0.8)
   - Kingfisher (4.7.0)
   - PKHUD (5.0.0)
-  - SwifterSwift (4.3.0):
-    - SwifterSwift/AppKit (= 4.3.0)
-    - SwifterSwift/CoreGraphics (= 4.3.0)
-    - SwifterSwift/CoreLocation (= 4.3.0)
-    - SwifterSwift/Foundation (= 4.3.0)
-    - SwifterSwift/MapKit (= 4.3.0)
-    - SwifterSwift/SwiftStdlib (= 4.3.0)
-    - SwifterSwift/UIKit (= 4.3.0)
-  - SwifterSwift/AppKit (4.3.0)
-  - SwifterSwift/CoreGraphics (4.3.0)
-  - SwifterSwift/CoreLocation (4.3.0)
-  - SwifterSwift/Foundation (4.3.0)
-  - SwifterSwift/MapKit (4.3.0)
-  - SwifterSwift/SwiftStdlib (4.3.0)
-  - SwifterSwift/UIKit (4.3.0)
   - SwiftyJSON (4.0.0-alpha.1)
 
 DEPENDENCIES:
@@ -27,7 +12,6 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift (~> 5.0)
   - Kingfisher (~> 4.7)
   - PKHUD (~> 5.0)
-  - SwifterSwift (~> 4.3)
   - SwiftyJSON (= 4.0.0-alpha.1)
 
 SPEC REPOS:
@@ -37,7 +21,6 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - Kingfisher
     - PKHUD
-    - SwifterSwift
     - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -46,9 +29,8 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 2e7dc7f98c111458c1ea2b373f893e8cf95e2b97
   Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
   PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
-  SwifterSwift: f3fce2b9fc5b9d8fda6eec33825e5243c60aebba
   SwiftyJSON: dc88934f85fb50b263b1632b9cbad3402505783e
 
-PODFILE CHECKSUM: a451cfd855114aae20682f43dcf748967fb9d7c1
+PODFILE CHECKSUM: ee642bc6566c9ace062a34e80b6ea94801debb55
 
 COCOAPODS: 1.5.0

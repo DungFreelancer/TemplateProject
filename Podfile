@@ -11,9 +11,8 @@ target 'TemplateProject' do
 
   pod 'FAPanels', '~> 0.4'
 
-  pod 'SwifterSwift', '~> 4.3'
-
   pod 'SwiftyJSON', '4.0.0-alpha.1'
 
   pod 'PKHUD', '~> 5.0'
+
 end
