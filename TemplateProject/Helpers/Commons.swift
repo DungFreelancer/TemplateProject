@@ -53,6 +53,20 @@ class Commons {
         viewController.present(alert, animated: true, completion: nil)
     }
     
+    func popupActionSheet(viewController:UIViewController, titleActionSheet:String, messageActionSheet:String, firstAction: UIAlertAction
+        , secondAction:UIAlertAction, thirdAction:UIAlertAction?) {
+        
+        let actionSheet = UIAlertController(title: titleActionSheet, message: messageActionSheet, preferredStyle: .actionSheet)
+ 
+        actionSheet.addAction(firstAction)
+        actionSheet.addAction(secondAction)
+        actionSheet.addAction(thirdAction!)
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        viewController.present(actionSheet, animated: true, completion: nil)
+        
+    }
+    
+    
     func getLocation() -> CLLocationCoordinate2D {
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.distanceFilter = kCLDistanceFilterNone
