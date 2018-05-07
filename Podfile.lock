@@ -1,12 +1,36 @@
 PODS:
-  - GravitySliderFlowLayout (1.0)
+  - Alamofire (4.7.2)
+  - FAPanels (0.4.0)
+  - IQKeyboardManagerSwift (5.0.8)
+  - Kingfisher (4.7.0)
+  - PKHUD (5.0.0)
+  - SwiftyJSON (4.0.0-alpha.1)
 
 DEPENDENCIES:
-  - GravitySliderFlowLayout
+  - Alamofire (~> 4.7)
+  - FAPanels (~> 0.4)
+  - IQKeyboardManagerSwift (~> 5.0)
+  - Kingfisher (~> 4.7)
+  - PKHUD (~> 5.0)
+  - SwiftyJSON (= 4.0.0-alpha.1)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - FAPanels
+    - IQKeyboardManagerSwift
+    - Kingfisher
+    - PKHUD
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
-  GravitySliderFlowLayout: bb9ae6a302b85821c9e0271c00533fae8091143b
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  FAPanels: 55928d83dc050bb36db5dbb2d969e7118f425d69
+  IQKeyboardManagerSwift: 2e7dc7f98c111458c1ea2b373f893e8cf95e2b97
+  Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
+  PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
+  SwiftyJSON: dc88934f85fb50b263b1632b9cbad3402505783e
 
-PODFILE CHECKSUM: 168fd87c89268b9873bc405d1eb996e9aeddf634
+PODFILE CHECKSUM: ee642bc6566c9ace062a34e80b6ea94801debb55
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.0
