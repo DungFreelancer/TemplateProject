@@ -3,18 +3,18 @@ use_frameworks!
 
 target 'TemplateProject' do
 
-  pod 'Alamofire'
+  pod 'Alamofire', '~> 4.7'
  
-  pod 'Kingfisher'
+  pod 'Kingfisher', '~> 4.7'
 
-  pod 'IQKeyboardManagerSwift'
+  pod 'IQKeyboardManagerSwift', '~> 6.0'
 
-  pod 'FAPanels'
+  pod 'FAPanels', '~> 0.5'
 
-  pod 'SwiftyJSON'
+  pod 'SwiftyJSON', '~> 4.1'
 
-  pod 'PKHUD'
+  pod 'PKHUD', '~> 5.0'
 
-  pod 'GravitySliderFlowLayout'
+  pod 'GravitySliderFlowLayout', '~> 1.0'
 
 end
