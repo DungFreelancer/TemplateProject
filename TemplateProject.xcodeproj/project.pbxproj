@@ -10,14 +10,15 @@
 		9A94BCB620A0B6FA00A60DED /* UIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A94BCB520A0B6FA00A60DED /* UIViewEx.swift */; };
 		9AB27A2C1F8BC524007BC150 /* HUDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB27A2B1F8BC524007BC150 /* HUDHelper.swift */; };
 		A02CB23620888043008D1117 /* DateEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02CB23520888043008D1117 /* DateEx.swift */; };
+		A0BA6DED20A2A45E0041466D /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BA6DEC20A2A45E0041466D /* AlertHelper.swift */; };
 		D0DAE98D6BE3F989484D1456 /* Pods_TemplateProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA573B5AC986056DB03586C /* Pods_TemplateProject.framework */; };
-		E80B521620A0E275000083AE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80B521520A0E275000083AE /* Color.swift */; };
+		E80B521620A0E275000083AE /* UIColorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80B521520A0E275000083AE /* UIColorEx.swift */; };
 		E880D09B1F807803002EEB55 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880D09A1F807803002EEB55 /* Log.swift */; };
 		E880D09F1F808D5E002EEB55 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880D09E1F808D5E002EEB55 /* Constants.swift */; };
 		E880D0A11F809F4F002EEB55 /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880D0A01F809F4F002EEB55 /* Commons.swift */; };
 		E8A025041F851F890082DA91 /* UIImageViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A025031F851F890082DA91 /* UIImageViewEx.swift */; };
 		E8A21C691F87D5D6008E69DD /* StringEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A21C681F87D5D6008E69DD /* StringEx.swift */; };
-		E8A21C6B1F87D754008E69DD /* NetworkHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A21C6A1F87D754008E69DD /* NetworkHelpers.swift */; };
+		E8A21C6B1F87D754008E69DD /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A21C6A1F87D754008E69DD /* NetworkHelper.swift */; };
 		E8B892DD1F7FFF8000DDA048 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B892DC1F7FFF8000DDA048 /* AppDelegate.swift */; };
 		E8B892DF1F7FFF8000DDA048 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B892DE1F7FFF8000DDA048 /* BaseVC.swift */; };
 		E8B892E21F7FFF8000DDA048 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B892E01F7FFF8000DDA048 /* Main.storyboard */; };
@@ -31,14 +32,15 @@
 		9A94BCB520A0B6FA00A60DED /* UIViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewEx.swift; sourceTree = "<group>"; };
 		9AB27A2B1F8BC524007BC150 /* HUDHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDHelper.swift; sourceTree = "<group>"; };
 		A02CB23520888043008D1117 /* DateEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateEx.swift; sourceTree = "<group>"; };
+		A0BA6DEC20A2A45E0041466D /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		BAB76CFD7309A3C94DCD59DA /* Pods-TemplateProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemplateProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TemplateProject/Pods-TemplateProject.debug.xcconfig"; sourceTree = "<group>"; };
-		E80B521520A0E275000083AE /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		E80B521520A0E275000083AE /* UIColorEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorEx.swift; sourceTree = "<group>"; };
 		E880D09A1F807803002EEB55 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		E880D09E1F808D5E002EEB55 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E880D0A01F809F4F002EEB55 /* Commons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commons.swift; sourceTree = "<group>"; };
 		E8A025031F851F890082DA91 /* UIImageViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewEx.swift; sourceTree = "<group>"; };
 		E8A21C681F87D5D6008E69DD /* StringEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringEx.swift; sourceTree = "<group>"; };
-		E8A21C6A1F87D754008E69DD /* NetworkHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelpers.swift; sourceTree = "<group>"; };
+		E8A21C6A1F87D754008E69DD /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		E8B892D91F7FFF8000DDA048 /* TemplateProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TemplateProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B892DC1F7FFF8000DDA048 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8B892DE1F7FFF8000DDA048 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
@@ -84,7 +86,7 @@
 				E8A21C681F87D5D6008E69DD /* StringEx.swift */,
 				A02CB23520888043008D1117 /* DateEx.swift */,
 				9A94BCB520A0B6FA00A60DED /* UIViewEx.swift */,
-				E80B521520A0E275000083AE /* Color.swift */,
+				E80B521520A0E275000083AE /* UIColorEx.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -138,8 +140,9 @@
 				E880D09A1F807803002EEB55 /* Log.swift */,
 				E880D09E1F808D5E002EEB55 /* Constants.swift */,
 				E880D0A01F809F4F002EEB55 /* Commons.swift */,
-				E8A21C6A1F87D754008E69DD /* NetworkHelpers.swift */,
+				E8A21C6A1F87D754008E69DD /* NetworkHelper.swift */,
 				9AB27A2B1F8BC524007BC150 /* HUDHelper.swift */,
+				A0BA6DEC20A2A45E0041466D /* AlertHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -194,7 +197,6 @@
 				E8B892D61F7FFF8000DDA048 /* Frameworks */,
 				E8B892D71F7FFF8000DDA048 /* Resources */,
 				DDE459F32DFCFE4C0B1F3CB3 /* [CP] Embed Pods Frameworks */,
-				67C8F109D85256215CC75F5E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,21 +273,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		67C8F109D85256215CC75F5E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TemplateProject/Pods-TemplateProject-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		DDE459F32DFCFE4C0B1F3CB3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -323,13 +310,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0BA6DED20A2A45E0041466D /* AlertHelper.swift in Sources */,
 				9A94BCB620A0B6FA00A60DED /* UIViewEx.swift in Sources */,
 				E8A025041F851F890082DA91 /* UIImageViewEx.swift in Sources */,
 				E8B892DF1F7FFF8000DDA048 /* BaseVC.swift in Sources */,
 				E8B892DD1F7FFF8000DDA048 /* AppDelegate.swift in Sources */,
 				E8A21C691F87D5D6008E69DD /* StringEx.swift in Sources */,
-				E80B521620A0E275000083AE /* Color.swift in Sources */,
-				E8A21C6B1F87D754008E69DD /* NetworkHelpers.swift in Sources */,
+				E80B521620A0E275000083AE /* UIColorEx.swift in Sources */,
+				E8A21C6B1F87D754008E69DD /* NetworkHelper.swift in Sources */,
 				E880D0A11F809F4F002EEB55 /* Commons.swift in Sources */,
 				A02CB23620888043008D1117 /* DateEx.swift in Sources */,
 				9AB27A2C1F8BC524007BC150 /* HUDHelper.swift in Sources */,

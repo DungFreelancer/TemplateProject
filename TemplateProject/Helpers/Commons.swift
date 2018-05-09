@@ -27,46 +27,6 @@ class Commons {
         return documentDirectory
     }
     
-    func showAlertOnViewController(_ viewController: UIViewController,
-                                   title: String? = nil,
-                                   message: String,
-                                   mainButton: String,
-                                   mainComplete: @escaping (UIAlertAction)->(),
-                                   otherButton: String? = nil,
-                                   otherComplete: ((UIAlertAction)->())? = nil) {
-        let alert: UIAlertController
-        
-        if title == nil || title == "" {
-            alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-        } else {
-            alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        }
-        
-        let mainAction = UIAlertAction(title: mainButton, style: .default, handler: mainComplete)
-        alert.addAction(mainAction)
-        
-        if let otherButton = otherButton {
-            let otherAction = UIAlertAction(title: otherButton, style: .cancel, handler: otherComplete)
-            alert.addAction(otherAction)
-        }
-        
-        viewController.present(alert, animated: true, completion: nil)
-    }
-    
-    func popupActionSheet(viewController:UIViewController, titleActionSheet:String, messageActionSheet:String, firstAction: UIAlertAction
-        , secondAction:UIAlertAction, thirdAction:UIAlertAction?) {
-        
-        let actionSheet = UIAlertController(title: titleActionSheet, message: messageActionSheet, preferredStyle: .actionSheet)
- 
-        actionSheet.addAction(firstAction)
-        actionSheet.addAction(secondAction)
-        actionSheet.addAction(thirdAction!)
-        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        viewController.present(actionSheet, animated: true, completion: nil)
-        
-    }
-    
-    
     func getLocation() -> CLLocationCoordinate2D {
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.distanceFilter = kCLDistanceFilterNone

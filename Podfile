@@ -3,7 +3,6 @@ use_frameworks!
 
 target 'TemplateProject' do
 
-
   pod 'Alamofire'
  
   pod 'Kingfisher'
@@ -17,4 +16,5 @@ target 'TemplateProject' do
   pod 'PKHUD'
 
   pod 'GravitySliderFlowLayout'
+
 end
