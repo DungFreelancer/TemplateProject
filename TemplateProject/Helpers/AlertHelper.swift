@@ -10,13 +10,13 @@ import UIKit
 
 class AlertHelper {
     
-    static func showPopupOnViewController(_ viewController: UIViewController,
-                                   title: String? = nil,
-                                   message: String,
-                                   mainButton: String,
-                                   mainComplete: @escaping (UIAlertAction)->(),
-                                   otherButton: String? = nil,
-                                   otherComplete: ((UIAlertAction)->())? = nil) {
+    static func showPopup(on viewController: UIViewController,
+                          title: String? = nil,
+                          message: String,
+                          mainButton: String,
+                          mainComplete: @escaping (UIAlertAction)->(),
+                          otherButton: String? = nil,
+                          otherComplete: ((UIAlertAction)->())? = nil) {
         let popup = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         
         if title != nil && title != "" {
@@ -34,15 +34,15 @@ class AlertHelper {
         viewController.present(popup, animated: true, completion: nil)
     }
     
-    static func showActionSheetOnViewController(_ viewController: UIViewController,
-                                         title: String? = nil,
-                                         message: String? = nil,
-                                         firstButton: String,
-                                         firstComplete: @escaping (UIAlertAction)->(),
-                                         secondButton: String? = nil,
-                                         secondComplete: ((UIAlertAction)->())? = nil,
-                                         thirdButton: String? = nil,
-                                         thirdComplete: ((UIAlertAction)->())? = nil) {
+    static func showActionSheet(on viewController: UIViewController,
+                                title: String? = nil,
+                                message: String? = nil,
+                                firstButton: String,
+                                firstComplete: @escaping (UIAlertAction)->(),
+                                secondButton: String? = nil,
+                                secondComplete: ((UIAlertAction)->())? = nil,
+                                thirdButton: String? = nil,
+                                thirdComplete: ((UIAlertAction)->())? = nil) {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         if title != nil && title != "" {

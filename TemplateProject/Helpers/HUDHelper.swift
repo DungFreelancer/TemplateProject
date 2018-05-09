@@ -20,6 +20,7 @@ class HUDHelper {
     }
     
     class ProgressView: PKHUDProgressView {
+        
         override func layoutSubviews() {
             super.layoutSubviews()
             
@@ -31,6 +32,7 @@ class HUDHelper {
             
             self.frame = CGRect(origin: CGPoint(x:0.0, y:0.0), size: CGSize(width: 100, height: 100))
         }
+        
     }
     
 }
