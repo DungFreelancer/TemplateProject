@@ -64,4 +64,11 @@ extension Date {
         return endDay - startDay
     }
     
+    func toString(format: String? = nil) -> String? {
+        let dateFormatter: DateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format ?? "yyyy-MM-dd:HH:mm:ss"
+        let date = dateFormatter.string(from: self) 
+        return date
+    }
+    
 }
