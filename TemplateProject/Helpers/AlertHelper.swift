@@ -10,11 +10,7 @@ import UIKit
 
 class AlertHelper {
     
-    static let sharedInstance = AlertHelper()
-    
-    private init() {}
-    
-    func showPopupOnViewController(_ viewController: UIViewController,
+    static func showPopupOnViewController(_ viewController: UIViewController,
                                    title: String? = nil,
                                    message: String,
                                    mainButton: String,
@@ -38,7 +34,7 @@ class AlertHelper {
         viewController.present(popup, animated: true, completion: nil)
     }
     
-    func showActionSheetOnViewController(_ viewController: UIViewController,
+    static func showActionSheetOnViewController(_ viewController: UIViewController,
                                          title: String? = nil,
                                          message: String? = nil,
                                          firstButton: String,

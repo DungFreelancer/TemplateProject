@@ -10,16 +10,12 @@ import PKHUD
 
 class HUDHelper {
     
-    static let sharedInstance = HUDHelper()
-    
-    private init() {}
-    
-    func showLoading(view: UIView) {
+    static func showLoading(view: UIView) {
         PKHUD.sharedHUD.contentView = ProgressView()
         PKHUD.sharedHUD.show(onView: view)
     }
     
-    func hideLoading() {
+    static func hideLoading() {
         PKHUD.sharedHUD.hide()
     }
     
