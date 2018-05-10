@@ -11,11 +11,11 @@ import UIKit
 class AlertHelper {
     
     static func showPopup(on viewController: UIViewController,
-                          title: String? = nil,
+                          title: String?,
                           message: String,
                           mainButton: String,
                           mainComplete: @escaping (UIAlertAction)->(),
-                          otherButton: String? = nil,
+                          otherButton: String?,
                           otherComplete: ((UIAlertAction)->())? = nil) {
         let popup = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         
@@ -35,13 +35,13 @@ class AlertHelper {
     }
     
     static func showActionSheet(on viewController: UIViewController,
-                                title: String? = nil,
-                                message: String? = nil,
+                                title: String?,
+                                message: String?,
                                 firstButton: String,
                                 firstComplete: @escaping (UIAlertAction)->(),
-                                secondButton: String? = nil,
+                                secondButton: String?,
                                 secondComplete: ((UIAlertAction)->())? = nil,
-                                thirdButton: String? = nil,
+                                thirdButton: String?,
                                 thirdComplete: ((UIAlertAction)->())? = nil) {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
