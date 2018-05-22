@@ -15,7 +15,7 @@ class AlertHelper {
                           message: String,
                           mainButton: String,
                           mainComplete: @escaping (UIAlertAction)->(),
-                          otherButton: String?,
+                          otherButton: String? = nil,
                           otherComplete: ((UIAlertAction)->())? = nil) {
         let popup = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         
@@ -39,9 +39,9 @@ class AlertHelper {
                                 message: String?,
                                 firstButton: String,
                                 firstComplete: @escaping (UIAlertAction)->(),
-                                secondButton: String?,
+                                secondButton: String? = nil,
                                 secondComplete: ((UIAlertAction)->())? = nil,
-                                thirdButton: String?,
+                                thirdButton: String? = nil,
                                 thirdComplete: ((UIAlertAction)->())? = nil) {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
