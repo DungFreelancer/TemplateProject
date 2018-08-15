@@ -37,4 +37,14 @@ class Commons {
         return coordinate
     }
     
+    func dellay(_ duration: Double, call function: @escaping () -> Void){
+        DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
+            function()
+        }
+    }
+    
+    func getViewFromXib(name: String) -> UIView? {
+        return UINib.init(nibName: name, bundle: nil).instantiate(withOwner: nil, options: nil).first as? UIView
+    }
+    
 }

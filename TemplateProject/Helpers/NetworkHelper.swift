@@ -11,7 +11,7 @@ import SwiftyJSON
 
 class NetworkHelper {
     
-    static let sharedInstance = NetworkHelper ()
+    static let sharedInstance = NetworkHelper()
     private let reachabilityManager = NetworkReachabilityManager()
     var isConnect: Bool? {
         return NetworkReachabilityManager()?.isReachable

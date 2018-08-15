@@ -10,6 +10,14 @@ import UIKit
 
 extension UIView {
     
+    var frameWidth: CGFloat {
+        return self.frame.width;
+    }
+    
+    var frameHeight: CGFloat {
+        return self.frame.height;
+    }
+    
     func setRoundedCornersFull() {
         self.layer.cornerRadius = self.frame.size.width / 2
     }
@@ -34,6 +42,15 @@ extension UIView {
         self.layer.shadowOffset = CGSize(width: CGFloat(0), height: CGFloat(2.0))
         self.layer.shadowOpacity = 1.0
         self.layer.shadowRadius = CGFloat(radius)
+    }
+    
+    func captureImage() -> UIImage {
+        UIGraphicsBeginImageContext(self.frame.size)
+        
+        self.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return image
     }
     
 }
