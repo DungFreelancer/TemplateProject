@@ -19,12 +19,12 @@ class NetworkHelper {
     
     private init() {}
     
-    func connectingChange(_ connected: @escaping (Bool)->()) {
+    func connectionStatusChange(_ isConnected: @escaping (Bool)->()) {
         reachabilityManager?.listener = { status in
             if (status != .unknown && status != .notReachable) {
-                connected(true)
+                isConnected(true)
             } else {
-                connected(false)
+                isConnected(false)
             }
         }
         reachabilityManager?.startListening()

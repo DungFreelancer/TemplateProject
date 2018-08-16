@@ -10,6 +10,8 @@ import UIKit
 
 class AlertHelper {
     
+    private init() {}
+    
     static func showPopup(on viewController: UIViewController,
                           title: String?,
                           message: String,
