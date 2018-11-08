@@ -5,16 +5,14 @@ target 'TemplateProject' do
 
   pod 'Alamofire', '~> 4.7'
  
-  pod 'Kingfisher', '~> 4.7'
+  pod 'Kingfisher', '~> 4.10'
 
-  pod 'IQKeyboardManagerSwift', '~> 6.0'
+  pod 'IQKeyboardManagerSwift', '~> 6.2'
 
-  pod 'FAPanels', '~> 0.5'
+  pod 'FAPanels', '~> 1.0'
 
-  pod 'SwiftyJSON', '~> 4.1'
+  pod 'SwiftyJSON', '~> 4.2'
 
-  pod 'PKHUD', '~> 5.0'
-
-  pod 'GravitySliderFlowLayout', '~> 1.0'
+  pod 'PKHUD', '~> 5.2'
 
 end
