@@ -68,6 +68,14 @@ class AlertHelper {
         
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
+        if !IS_IPHONE {
+            if let popOver = actionSheet.popoverPresentationController {
+                popOver.sourceView = viewController.view
+                popOver.sourceRect = CGRect(x: viewController.view.bounds.midX, y: viewController.view.bounds.midY, width: 0, height: 0)
+                popOver.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
+            }
+        }
+        
         viewController.present(actionSheet, animated: true, completion: nil)
     }
     
