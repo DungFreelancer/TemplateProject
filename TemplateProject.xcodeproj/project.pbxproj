@@ -13,18 +13,6 @@
 		A0BA6DED20A2A45E0041466D /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BA6DEC20A2A45E0041466D /* AlertHelper.swift */; };
 		D0DAE98D6BE3F989484D1456 /* Pods_TemplateProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA573B5AC986056DB03586C /* Pods_TemplateProject.framework */; };
 		E80B521620A0E275000083AE /* UIColorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80B521520A0E275000083AE /* UIColorEx.swift */; };
-		E82488112193A533007C630C /* BadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82488102193A533007C630C /* BadgeButton.swift */; };
-		E82488192193A53A007C630C /* ProgressIndicator.xib in Resources */ = {isa = PBXBuildFile; fileRef = E82488142193A53A007C630C /* ProgressIndicator.xib */; };
-		E824881A2193A53A007C630C /* ProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82488152193A53A007C630C /* ProgressIndicator.swift */; };
-		E824881B2193A53A007C630C /* IndicatorStack.xib in Resources */ = {isa = PBXBuildFile; fileRef = E82488172193A53A007C630C /* IndicatorStack.xib */; };
-		E824881C2193A53A007C630C /* IndicatorStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82488182193A53A007C630C /* IndicatorStack.swift */; };
-		E82488212193A540007C630C /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E824881E2193A540007C630C /* AppError.swift */; };
-		E82488222193A540007C630C /* CameraErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E824881F2193A540007C630C /* CameraErrors.swift */; };
-		E82488232193A540007C630C /* PhotoLibraryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82488202193A540007C630C /* PhotoLibraryError.swift */; };
-		E82488252193A545007C630C /* DecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82488242193A545007C630C /* DecodingStrategy.swift */; };
-		E824882A2193A6AF007C630C /* ImageCropperPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82488272193A6AF007C630C /* ImageCropperPicker.swift */; };
-		E824882B2193A6AF007C630C /* TCImageCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82488282193A6AF007C630C /* TCImageCropViewController.swift */; };
-		E824882C2193A6AF007C630C /* TCImageCropViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E82488292193A6AF007C630C /* TCImageCropViewController.xib */; };
 		E880D09B1F807803002EEB55 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880D09A1F807803002EEB55 /* Log.swift */; };
 		E880D09F1F808D5E002EEB55 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880D09E1F808D5E002EEB55 /* Constants.swift */; };
 		E880D0A11F809F4F002EEB55 /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880D0A01F809F4F002EEB55 /* Commons.swift */; };
@@ -47,18 +35,6 @@
 		A0BA6DEC20A2A45E0041466D /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		BAB76CFD7309A3C94DCD59DA /* Pods-TemplateProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemplateProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TemplateProject/Pods-TemplateProject.debug.xcconfig"; sourceTree = "<group>"; };
 		E80B521520A0E275000083AE /* UIColorEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorEx.swift; sourceTree = "<group>"; };
-		E82488102193A533007C630C /* BadgeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeButton.swift; sourceTree = "<group>"; };
-		E82488142193A53A007C630C /* ProgressIndicator.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressIndicator.xib; sourceTree = "<group>"; };
-		E82488152193A53A007C630C /* ProgressIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressIndicator.swift; sourceTree = "<group>"; };
-		E82488172193A53A007C630C /* IndicatorStack.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndicatorStack.xib; sourceTree = "<group>"; };
-		E82488182193A53A007C630C /* IndicatorStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorStack.swift; sourceTree = "<group>"; };
-		E824881E2193A540007C630C /* AppError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
-		E824881F2193A540007C630C /* CameraErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraErrors.swift; sourceTree = "<group>"; };
-		E82488202193A540007C630C /* PhotoLibraryError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibraryError.swift; sourceTree = "<group>"; };
-		E82488242193A545007C630C /* DecodingStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DecodingStrategy.swift; path = TemplateProject/Helpers/DecodingStrategy.swift; sourceTree = SOURCE_ROOT; };
-		E82488272193A6AF007C630C /* ImageCropperPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCropperPicker.swift; sourceTree = "<group>"; };
-		E82488282193A6AF007C630C /* TCImageCropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCImageCropViewController.swift; sourceTree = "<group>"; };
-		E82488292193A6AF007C630C /* TCImageCropViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TCImageCropViewController.xib; sourceTree = "<group>"; };
 		E880D09A1F807803002EEB55 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		E880D09E1F808D5E002EEB55 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E880D0A01F809F4F002EEB55 /* Commons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commons.swift; sourceTree = "<group>"; };
@@ -93,61 +69,6 @@
 				3C07B82D8CE755958618B85F /* Pods-TemplateProject.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		E824880F2193A533007C630C /* BadgeButton */ = {
-			isa = PBXGroup;
-			children = (
-				E82488102193A533007C630C /* BadgeButton.swift */,
-			);
-			path = BadgeButton;
-			sourceTree = "<group>";
-		};
-		E82488122193A53A007C630C /* ProgressBar */ = {
-			isa = PBXGroup;
-			children = (
-				E82488132193A53A007C630C /* ProgressIndicator */,
-				E82488162193A53A007C630C /* IndicatorStack */,
-			);
-			path = ProgressBar;
-			sourceTree = "<group>";
-		};
-		E82488132193A53A007C630C /* ProgressIndicator */ = {
-			isa = PBXGroup;
-			children = (
-				E82488142193A53A007C630C /* ProgressIndicator.xib */,
-				E82488152193A53A007C630C /* ProgressIndicator.swift */,
-			);
-			path = ProgressIndicator;
-			sourceTree = "<group>";
-		};
-		E82488162193A53A007C630C /* IndicatorStack */ = {
-			isa = PBXGroup;
-			children = (
-				E82488172193A53A007C630C /* IndicatorStack.xib */,
-				E82488182193A53A007C630C /* IndicatorStack.swift */,
-			);
-			path = IndicatorStack;
-			sourceTree = "<group>";
-		};
-		E824881D2193A540007C630C /* Errors */ = {
-			isa = PBXGroup;
-			children = (
-				E824881E2193A540007C630C /* AppError.swift */,
-				E824881F2193A540007C630C /* CameraErrors.swift */,
-				E82488202193A540007C630C /* PhotoLibraryError.swift */,
-			);
-			path = Errors;
-			sourceTree = "<group>";
-		};
-		E82488262193A6AF007C630C /* TCImageCropViewController */ = {
-			isa = PBXGroup;
-			children = (
-				E82488272193A6AF007C630C /* ImageCropperPicker.swift */,
-				E82488282193A6AF007C630C /* TCImageCropViewController.swift */,
-				E82488292193A6AF007C630C /* TCImageCropViewController.xib */,
-			);
-			path = TCImageCropViewController;
 			sourceTree = "<group>";
 		};
 		E830275B1F80011C003EE7ED /* Supporting Files */ = {
@@ -194,6 +115,8 @@
 				E830275B1F80011C003EE7ED /* Supporting Files */,
 				E8B892EE1F7FFFF100DDA048 /* Resources */,
 				E8B892F11F80007900DDA048 /* Helpers */,
+				E8B892F21F8000A600DDA048 /* Models */,
+				E8B892F31F8000B400DDA048 /* ViewModels */,
 				E8B892F41F8000C100DDA048 /* ViewControllers */,
 				E8B892F51F8000CF00DDA048 /* Layouts */,
 				E8B892DC1F7FFF8000DDA048 /* AppDelegate.swift */,
@@ -213,20 +136,29 @@
 		E8B892F11F80007900DDA048 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				E824881D2193A540007C630C /* Errors */,
-				E82488122193A53A007C630C /* ProgressBar */,
 				E8A025021F851F5E0082DA91 /* Extension */,
 				E880D09A1F807803002EEB55 /* Log.swift */,
-				E82488242193A545007C630C /* DecodingStrategy.swift */,
 				E880D09E1F808D5E002EEB55 /* Constants.swift */,
-				E82488262193A6AF007C630C /* TCImageCropViewController */,
-				E824880F2193A533007C630C /* BadgeButton */,
 				E880D0A01F809F4F002EEB55 /* Commons.swift */,
 				E8A21C6A1F87D754008E69DD /* NetworkHelper.swift */,
 				9AB27A2B1F8BC524007BC150 /* HUDHelper.swift */,
 				A0BA6DEC20A2A45E0041466D /* AlertHelper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E8B892F21F8000A600DDA048 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E8B892F31F8000B400DDA048 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		E8B892F41F8000C100DDA048 /* ViewControllers */ = {
@@ -315,12 +247,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E82488192193A53A007C630C /* ProgressIndicator.xib in Resources */,
 				E8B892F01F80005000DDA048 /* Localizable.strings in Resources */,
 				E8B892E41F7FFF8000DDA048 /* Assets.xcassets in Resources */,
 				E8B892E21F7FFF8000DDA048 /* Main.storyboard in Resources */,
-				E824881B2193A53A007C630C /* IndicatorStack.xib in Resources */,
-				E824882C2193A6AF007C630C /* TCImageCropViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,25 +311,16 @@
 			files = (
 				A0BA6DED20A2A45E0041466D /* AlertHelper.swift in Sources */,
 				9A94BCB620A0B6FA00A60DED /* UIViewEx.swift in Sources */,
-				E824881C2193A53A007C630C /* IndicatorStack.swift in Sources */,
 				E8A025041F851F890082DA91 /* UIImageViewEx.swift in Sources */,
-				E824882A2193A6AF007C630C /* ImageCropperPicker.swift in Sources */,
-				E82488212193A540007C630C /* AppError.swift in Sources */,
 				E8B892DF1F7FFF8000DDA048 /* BaseVC.swift in Sources */,
 				E8B892DD1F7FFF8000DDA048 /* AppDelegate.swift in Sources */,
-				E82488232193A540007C630C /* PhotoLibraryError.swift in Sources */,
 				E8A21C691F87D5D6008E69DD /* StringEx.swift in Sources */,
 				E80B521620A0E275000083AE /* UIColorEx.swift in Sources */,
-				E82488222193A540007C630C /* CameraErrors.swift in Sources */,
 				E8A21C6B1F87D754008E69DD /* NetworkHelper.swift in Sources */,
-				E824882B2193A6AF007C630C /* TCImageCropViewController.swift in Sources */,
 				E880D0A11F809F4F002EEB55 /* Commons.swift in Sources */,
-				E82488112193A533007C630C /* BadgeButton.swift in Sources */,
 				A02CB23620888043008D1117 /* DateEx.swift in Sources */,
 				9AB27A2C1F8BC524007BC150 /* HUDHelper.swift in Sources */,
 				E880D09B1F807803002EEB55 /* Log.swift in Sources */,
-				E82488252193A545007C630C /* DecodingStrategy.swift in Sources */,
-				E824881A2193A53A007C630C /* ProgressIndicator.swift in Sources */,
 				E880D09F1F808D5E002EEB55 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
