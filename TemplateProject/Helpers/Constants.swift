@@ -18,7 +18,7 @@ let SCREEN_SIZE: CGSize = UIScreen.main.bounds.size
 
 let IS_IPHONE: Bool = UIDevice.current.model == "iPhone"
 
-let IS_LANDSCAPE: Bool = UIDevice.current.orientation.isLandscape
+let IS_LANDSCAPE: Bool = UIApplication.shared.statusBarOrientation.isLandscape
 
 let IS_SIMULATOR: Bool = Bool(exactly: TARGET_IPHONE_SIMULATOR as NSNumber)!
 
