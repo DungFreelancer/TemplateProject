@@ -52,6 +52,16 @@ extension UIView {
         self.layer.shadowColor = UIColor.gray.cgColor
     }
     
+    func setGradientWithStartColor(_ startColor: UIColor, startPoint: CGPoint, to endColor: UIColor, endPoint: CGPoint) {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.bounds
+        gradientLayer.colors = [startColor.cgColor, endColor.cgColor]
+        gradientLayer.startPoint = startPoint
+        gradientLayer.endPoint = endPoint
+        
+        self.layer.addSublayer(gradientLayer)
+    }
+    
     func captureImage() -> UIImage {
         UIGraphicsBeginImageContext(self.frame.size)
         self.layer.render(in: UIGraphicsGetCurrentContext()!)
