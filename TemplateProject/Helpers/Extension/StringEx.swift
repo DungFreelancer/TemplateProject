@@ -10,6 +10,14 @@ import Foundation
 
 extension String {
     
+    var localized: String {
+        return NSLocalizedString(self, comment: "")
+    }
+    
+    func trim() -> String {
+        return self.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+    
     func toDate(format: String?) -> Date? {
         let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.dateFormat = format ?? "yyyy-MM-dd:HH:mm:ss"

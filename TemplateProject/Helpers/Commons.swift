@@ -7,43 +7,29 @@
 //
 
 import UIKit
-import CoreLocation
 
 class Commons {
     
-    static let sharedInstance: Commons = Commons()
-    lazy private var locationManager: CLLocationManager = CLLocationManager()
-    
     private init() {}
     
-    func removePersisDomain() {
+    static func removePersisDomain() {
         let appDomain: String = Bundle.main.bundleIdentifier!
         USER_DEFAULT.removePersistentDomain(forName: appDomain)
     }
     
-    func applicationDocumentDirectoryString() -> String {
+    static func applicationDocumentDirectoryString() -> String {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let documentDirectory = paths[0]
         return documentDirectory
     }
     
-    func getLocation() -> CLLocationCoordinate2D {
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager.distanceFilter = kCLDistanceFilterNone
-        self.locationManager.requestWhenInUseAuthorization()
-        self.locationManager.startUpdatingLocation()
-        let location: CLLocation = self.locationManager.location ?? CLLocation()
-        let coordinate = location.coordinate
-        return coordinate
-    }
-    
-    func dellay(_ duration: Double, call function: @escaping () -> Void){
+    static func dellay(_ duration: Double, call function: @escaping () -> Void){
         DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
             function()
         }
     }
     
-    func getViewFromXib(name: String) -> UIView? {
+    static func getViewFromXib(name: String) -> UIView? {
         return UINib.init(nibName: name, bundle: nil).instantiate(withOwner: nil, options: nil).first as? UIView
     }
     

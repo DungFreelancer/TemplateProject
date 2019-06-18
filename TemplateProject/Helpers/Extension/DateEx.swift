@@ -39,7 +39,7 @@ extension Date {
         }
         
         let urlTime = "http://worldclockapi.com/api/json/utc/now"
-        NetworkHelper.sharedInstance.get(url: urlTime) { (json, error) in
+        NetworkHelper.shared.get(url: urlTime) { (json, error) in
             if let json = json {
                 let strCurrentDate: String = json["currentDateTime"].string!
                 let currentDate: Date? = strCurrentDate.toDate(format: "yyyy-MM-dd'T'HH:mmZ");
