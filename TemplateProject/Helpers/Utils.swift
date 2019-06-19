@@ -1,5 +1,5 @@
 //
-//  Commons.swift
+//  Utils.swift
 //  TemplateProject
 //
 //  Created by Tran Gia Huy on 10/1/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Commons {
+class Utils {
     
     private init() {}
     
@@ -31,6 +31,12 @@ class Commons {
     
     static func getViewFromXib(name: String) -> UIView? {
         return UINib.init(nibName: name, bundle: nil).instantiate(withOwner: nil, options: nil).first as? UIView
+    }
+    
+    static func getViewController(name: String) -> UIViewController {
+        let storyboard = UIStoryboard(name: name, bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: name)
+        return vc
     }
     
 }

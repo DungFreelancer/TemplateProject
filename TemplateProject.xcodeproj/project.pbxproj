@@ -16,7 +16,7 @@
 		E80B521620A0E275000083AE /* UIColorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80B521520A0E275000083AE /* UIColorEx.swift */; };
 		E880D09B1F807803002EEB55 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880D09A1F807803002EEB55 /* Log.swift */; };
 		E880D09F1F808D5E002EEB55 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880D09E1F808D5E002EEB55 /* Constants.swift */; };
-		E880D0A11F809F4F002EEB55 /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880D0A01F809F4F002EEB55 /* Commons.swift */; };
+		E880D0A11F809F4F002EEB55 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880D0A01F809F4F002EEB55 /* Utils.swift */; };
 		E8A025041F851F890082DA91 /* UIImageViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A025031F851F890082DA91 /* UIImageViewEx.swift */; };
 		E8A21C691F87D5D6008E69DD /* StringEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A21C681F87D5D6008E69DD /* StringEx.swift */; };
 		E8A21C6B1F87D754008E69DD /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A21C6A1F87D754008E69DD /* NetworkHelper.swift */; };
@@ -39,7 +39,7 @@
 		E80B521520A0E275000083AE /* UIColorEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorEx.swift; sourceTree = "<group>"; };
 		E880D09A1F807803002EEB55 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		E880D09E1F808D5E002EEB55 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		E880D0A01F809F4F002EEB55 /* Commons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commons.swift; sourceTree = "<group>"; };
+		E880D0A01F809F4F002EEB55 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		E8A025031F851F890082DA91 /* UIImageViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewEx.swift; sourceTree = "<group>"; };
 		E8A21C681F87D5D6008E69DD /* StringEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringEx.swift; sourceTree = "<group>"; };
 		E8A21C6A1F87D754008E69DD /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 				E8A025021F851F5E0082DA91 /* Extension */,
 				E880D09A1F807803002EEB55 /* Log.swift */,
 				E880D09E1F808D5E002EEB55 /* Constants.swift */,
-				E880D0A01F809F4F002EEB55 /* Commons.swift */,
+				E880D0A01F809F4F002EEB55 /* Utils.swift */,
 				E8A21C6A1F87D754008E69DD /* NetworkHelper.swift */,
 				9AB27A2B1F8BC524007BC150 /* HUDHelper.swift */,
 				A0BA6DEC20A2A45E0041466D /* AlertHelper.swift */,
@@ -320,7 +320,7 @@
 				E8A21C691F87D5D6008E69DD /* StringEx.swift in Sources */,
 				E80B521620A0E275000083AE /* UIColorEx.swift in Sources */,
 				E8A21C6B1F87D754008E69DD /* NetworkHelper.swift in Sources */,
-				E880D0A11F809F4F002EEB55 /* Commons.swift in Sources */,
+				E880D0A11F809F4F002EEB55 /* Utils.swift in Sources */,
 				A02CB23620888043008D1117 /* DateEx.swift in Sources */,
 				9AB27A2C1F8BC524007BC150 /* HUDHelper.swift in Sources */,
 				E880D09B1F807803002EEB55 /* Log.swift in Sources */,
