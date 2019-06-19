@@ -73,6 +73,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A0744CB822BA42A900394260 /* BaseVC */ = {
+			isa = PBXGroup;
+			children = (
+				E8B892DE1F7FFF8000DDA048 /* BaseVC.swift */,
+				E8B892E01F7FFF8000DDA048 /* Main.storyboard */,
+			);
+			path = BaseVC;
+			sourceTree = "<group>";
+		};
 		E830275B1F80011C003EE7ED /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,11 +125,10 @@
 			children = (
 				E830275B1F80011C003EE7ED /* Supporting Files */,
 				E8B892EE1F7FFFF100DDA048 /* Resources */,
-				E8B892F11F80007900DDA048 /* Helpers */,
+				E8B892F11F80007900DDA048 /* Common */,
 				E8B892F21F8000A600DDA048 /* Models */,
 				E8B892F31F8000B400DDA048 /* ViewModels */,
 				E8B892F41F8000C100DDA048 /* ViewControllers */,
-				E8B892F51F8000CF00DDA048 /* Layouts */,
 				E8B892DC1F7FFF8000DDA048 /* AppDelegate.swift */,
 			);
 			path = TemplateProject;
@@ -135,7 +143,7 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		E8B892F11F80007900DDA048 /* Helpers */ = {
+		E8B892F11F80007900DDA048 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				E8A025021F851F5E0082DA91 /* Extension */,
@@ -147,7 +155,7 @@
 				A0BA6DEC20A2A45E0041466D /* AlertHelper.swift */,
 				A00A48D322B8E62000361448 /* LocationHelper.swift */,
 			);
-			path = Helpers;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		E8B892F21F8000A600DDA048 /* Models */ = {
@@ -167,17 +175,9 @@
 		E8B892F41F8000C100DDA048 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E8B892DE1F7FFF8000DDA048 /* BaseVC.swift */,
+				A0744CB822BA42A900394260 /* BaseVC */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		E8B892F51F8000CF00DDA048 /* Layouts */ = {
-			isa = PBXGroup;
-			children = (
-				E8B892E01F7FFF8000DDA048 /* Main.storyboard */,
-			);
-			path = Layouts;
 			sourceTree = "<group>";
 		};
 		ED9BDF8DE5BC849E2563C551 /* Frameworks */ = {
