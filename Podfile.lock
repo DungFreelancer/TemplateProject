@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (4.8.2)
-  - FacebookCore (0.7.0):
-    - FBSDKCoreKit (~> 5.0)
-  - FacebookLogin (0.7.0):
-    - FacebookCore (~> 0.7)
-    - FBSDKCoreKit (~> 5.0)
-    - FBSDKLoginKit (~> 5.0)
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
+  - FacebookCore (0.6.0):
+    - Bolts (~> 1.9)
+    - FBSDKCoreKit (~> 4.43)
+  - FacebookLogin (0.6.0):
+    - Bolts (~> 1.9)
+    - FacebookCore (~> 0.5)
+    - FBSDKCoreKit (~> 4.43)
+    - FBSDKLoginKit (~> 4.43)
   - FAPanels (1.0.3)
-  - FBSDKCoreKit (5.0.2):
-    - FBSDKCoreKit/Basics (= 5.0.2)
-    - FBSDKCoreKit/Core (= 5.0.2)
-  - FBSDKCoreKit/Basics (5.0.2)
-  - FBSDKCoreKit/Core (5.0.2):
-    - FBSDKCoreKit/Basics
-  - FBSDKLoginKit (5.0.2):
-    - FBSDKCoreKit (~> 5.0)
+  - FBSDKCoreKit (4.44.1):
+    - Bolts (~> 1.9)
+  - FBSDKLoginKit (4.44.1):
+    - FBSDKCoreKit
   - GoogleSignIn (4.4.0):
     - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
     - "GoogleToolboxForMac/NSString+URLArguments (~> 2.1)"
@@ -35,8 +39,8 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - FacebookCore
-  - FacebookLogin
+  - FacebookCore (= 0.6)
+  - FacebookLogin (= 0.6)
   - FAPanels
   - GoogleSignIn
   - IQKeyboardManagerSwift
@@ -47,6 +51,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Bolts
     - FacebookCore
     - FacebookLogin
     - FAPanels
@@ -62,11 +67,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
-  FacebookCore: 4eee98476cb37a485af5d337eb21f8cd5b3c7e6c
-  FacebookLogin: 94cdad6850e86a2b04704dedfe7674a7af8148eb
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  FacebookCore: 38cd3a4078738d6f648eb9b6b9d35b02d693e9a1
+  FacebookLogin: 658b0569961a081a0890f5f4dbf69ced00657d9e
   FAPanels: 2b21e47ebb7445f87d9173b5a04f63e8ccd1d010
-  FBSDKCoreKit: 3e41c402eb64ea7799c71833ff9e5690f27b9c42
-  FBSDKLoginKit: a88f36da648e4c5d60eb261c63eac067abb97130
+  FBSDKCoreKit: a823ae35bdb60ebb8d7a7e51abe7c5d87d2bfced
+  FBSDKLoginKit: 54ae59987f2a8703021557c90a9aebb9e5c2bef6
   GoogleSignIn: 7ff245e1a7b26d379099d3243a562f5747e23d39
   GoogleToolboxForMac: b3553629623a3b1bff17f555e736cd5a6d95ad55
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
@@ -75,6 +81,6 @@ SPEC CHECKSUMS:
   PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 13a687affeb0d5d25030a0414006a7d24d527937
+PODFILE CHECKSUM: fcd28be7d966a8d4c44b9200a353e8c759e0b1d3
 
 COCOAPODS: 1.5.3
