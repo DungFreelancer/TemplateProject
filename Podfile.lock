@@ -15,6 +15,19 @@ PODS:
     - FBSDKCoreKit/Basics
   - FBSDKLoginKit (5.0.2):
     - FBSDKCoreKit (~> 5.0)
+  - GoogleSignIn (4.4.0):
+    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
+    - "GoogleToolboxForMac/NSString+URLArguments (~> 2.1)"
+    - GTMSessionFetcher/Core (~> 1.1)
+  - GoogleToolboxForMac/DebugUtils (2.2.1):
+    - GoogleToolboxForMac/Defines (= 2.2.1)
+  - GoogleToolboxForMac/Defines (2.2.1)
+  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.2.1)":
+    - GoogleToolboxForMac/DebugUtils (= 2.2.1)
+    - GoogleToolboxForMac/Defines (= 2.2.1)
+    - "GoogleToolboxForMac/NSString+URLArguments (= 2.2.1)"
+  - "GoogleToolboxForMac/NSString+URLArguments (2.2.1)"
+  - GTMSessionFetcher/Core (1.2.2)
   - IQKeyboardManagerSwift (6.4.0)
   - Kingfisher (5.6.0)
   - PKHUD (5.3.0)
@@ -25,6 +38,7 @@ DEPENDENCIES:
   - FacebookCore
   - FacebookLogin
   - FAPanels
+  - GoogleSignIn
   - IQKeyboardManagerSwift
   - Kingfisher
   - PKHUD
@@ -38,6 +52,9 @@ SPEC REPOS:
     - FAPanels
     - FBSDKCoreKit
     - FBSDKLoginKit
+    - GoogleSignIn
+    - GoogleToolboxForMac
+    - GTMSessionFetcher
     - IQKeyboardManagerSwift
     - Kingfisher
     - PKHUD
@@ -50,11 +67,14 @@ SPEC CHECKSUMS:
   FAPanels: 2b21e47ebb7445f87d9173b5a04f63e8ccd1d010
   FBSDKCoreKit: 3e41c402eb64ea7799c71833ff9e5690f27b9c42
   FBSDKLoginKit: a88f36da648e4c5d60eb261c63eac067abb97130
+  GoogleSignIn: 7ff245e1a7b26d379099d3243a562f5747e23d39
+  GoogleToolboxForMac: b3553629623a3b1bff17f555e736cd5a6d95ad55
+  GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
   IQKeyboardManagerSwift: ed9b04ee0e3067ffba543283462d619f944b05e5
   Kingfisher: 1a50df6880a60bae26f3e21a0df3d17b892f5e0b
   PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: e2ef83d8292ab6a9ddbef9d2a2b6b341c87a0f29
+PODFILE CHECKSUM: 13a687affeb0d5d25030a0414006a7d24d527937
 
 COCOAPODS: 1.5.3

@@ -19,4 +19,6 @@ target 'TemplateProject' do
 
   pod 'FacebookLogin'
 
+  pod 'GoogleSignIn'
+
 end

@@ -13,6 +13,7 @@
 		A02CB23620888043008D1117 /* DateEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02CB23520888043008D1117 /* DateEx.swift */; };
 		A096529922BB457900FFABD3 /* FacebookHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A096529822BB457900FFABD3 /* FacebookHelper.swift */; };
 		A0BA6DED20A2A45E0041466D /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BA6DEC20A2A45E0041466D /* AlertHelper.swift */; };
+		A0CA6EDA22BB9FC200DA6ED4 /* GoogleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CA6ED922BB9FC200DA6ED4 /* GoogleHelper.swift */; };
 		D0DAE98D6BE3F989484D1456 /* Pods_TemplateProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA573B5AC986056DB03586C /* Pods_TemplateProject.framework */; };
 		E80B521620A0E275000083AE /* UIColorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80B521520A0E275000083AE /* UIColorEx.swift */; };
 		E880D09B1F807803002EEB55 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880D09A1F807803002EEB55 /* Log.swift */; };
@@ -37,6 +38,7 @@
 		A02CB23520888043008D1117 /* DateEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateEx.swift; sourceTree = "<group>"; };
 		A096529822BB457900FFABD3 /* FacebookHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookHelper.swift; sourceTree = "<group>"; };
 		A0BA6DEC20A2A45E0041466D /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		A0CA6ED922BB9FC200DA6ED4 /* GoogleHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleHelper.swift; sourceTree = "<group>"; };
 		BAB76CFD7309A3C94DCD59DA /* Pods-TemplateProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemplateProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TemplateProject/Pods-TemplateProject.debug.xcconfig"; sourceTree = "<group>"; };
 		E80B521520A0E275000083AE /* UIColorEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorEx.swift; sourceTree = "<group>"; };
 		E880D09A1F807803002EEB55 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				A0BA6DEC20A2A45E0041466D /* AlertHelper.swift */,
 				A00A48D322B8E62000361448 /* LocationHelper.swift */,
 				A096529822BB457900FFABD3 /* FacebookHelper.swift */,
+				A0CA6ED922BB9FC200DA6ED4 /* GoogleHelper.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				E8B892D61F7FFF8000DDA048 /* Frameworks */,
 				E8B892D71F7FFF8000DDA048 /* Resources */,
 				DDE459F32DFCFE4C0B1F3CB3 /* [CP] Embed Pods Frameworks */,
+				982F2D5408C74F958C58AB54 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -280,6 +284,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		982F2D5408C74F958C58AB54 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TemplateProject/Pods-TemplateProject-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TemplateProject/Pods-TemplateProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DDE459F32DFCFE4C0B1F3CB3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -293,6 +315,8 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
@@ -306,6 +330,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
@@ -333,6 +359,7 @@
 				E80B521620A0E275000083AE /* UIColorEx.swift in Sources */,
 				E8A21C6B1F87D754008E69DD /* NetworkHelper.swift in Sources */,
 				E880D0A11F809F4F002EEB55 /* Utils.swift in Sources */,
+				A0CA6EDA22BB9FC200DA6ED4 /* GoogleHelper.swift in Sources */,
 				A02CB23620888043008D1117 /* DateEx.swift in Sources */,
 				9AB27A2C1F8BC524007BC150 /* HUDHelper.swift in Sources */,
 				E880D09B1F807803002EEB55 /* Log.swift in Sources */,
