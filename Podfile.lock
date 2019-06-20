@@ -1,36 +1,60 @@
 PODS:
-  - Alamofire (4.7.3)
-  - FAPanels (1.0.2)
-  - IQKeyboardManagerSwift (6.2.0)
-  - Kingfisher (4.10.1)
-  - PKHUD (5.2.0)
-  - SwiftyJSON (4.2.0)
+  - Alamofire (4.8.2)
+  - FacebookCore (0.7.0):
+    - FBSDKCoreKit (~> 5.0)
+  - FacebookLogin (0.7.0):
+    - FacebookCore (~> 0.7)
+    - FBSDKCoreKit (~> 5.0)
+    - FBSDKLoginKit (~> 5.0)
+  - FAPanels (1.0.3)
+  - FBSDKCoreKit (5.0.2):
+    - FBSDKCoreKit/Basics (= 5.0.2)
+    - FBSDKCoreKit/Core (= 5.0.2)
+  - FBSDKCoreKit/Basics (5.0.2)
+  - FBSDKCoreKit/Core (5.0.2):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (5.0.2):
+    - FBSDKCoreKit (~> 5.0)
+  - IQKeyboardManagerSwift (6.4.0)
+  - Kingfisher (5.6.0)
+  - PKHUD (5.3.0)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.7)
-  - FAPanels (~> 1.0)
-  - IQKeyboardManagerSwift (~> 6.2)
-  - Kingfisher (~> 4.10)
-  - PKHUD (~> 5.2)
-  - SwiftyJSON (~> 4.2)
+  - Alamofire
+  - FacebookCore
+  - FacebookLogin
+  - FAPanels
+  - IQKeyboardManagerSwift
+  - Kingfisher
+  - PKHUD
+  - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - FacebookCore
+    - FacebookLogin
     - FAPanels
+    - FBSDKCoreKit
+    - FBSDKLoginKit
     - IQKeyboardManagerSwift
     - Kingfisher
     - PKHUD
     - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
-  FAPanels: 520037c53f4ded152e8e6103d97f79b644473363
-  IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
-  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
-  PKHUD: dd5357ac65f26115c35c4a68e9b328053326c5fe
-  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  FacebookCore: 4eee98476cb37a485af5d337eb21f8cd5b3c7e6c
+  FacebookLogin: 94cdad6850e86a2b04704dedfe7674a7af8148eb
+  FAPanels: 2b21e47ebb7445f87d9173b5a04f63e8ccd1d010
+  FBSDKCoreKit: 3e41c402eb64ea7799c71833ff9e5690f27b9c42
+  FBSDKLoginKit: a88f36da648e4c5d60eb261c63eac067abb97130
+  IQKeyboardManagerSwift: ed9b04ee0e3067ffba543283462d619f944b05e5
+  Kingfisher: 1a50df6880a60bae26f3e21a0df3d17b892f5e0b
+  PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 048307cc9f1bdfe6e9961a80624189d204104bbc
+PODFILE CHECKSUM: e2ef83d8292ab6a9ddbef9d2a2b6b341c87a0f29
 
 COCOAPODS: 1.5.3

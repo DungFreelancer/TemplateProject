@@ -25,7 +25,7 @@ let IS_SIMULATOR: Bool = Bool(exactly: TARGET_OS_SIMULATOR as NSNumber)!
 var IOS: Int {
     get {
         let currentOS = UIDevice.current.systemVersion
-        let index = currentOS.index(of: ".") ?? currentOS.endIndex
+        let index = currentOS.firstIndex(of: ".") ?? currentOS.endIndex
         return Int(currentOS[..<index])!
     }
 }

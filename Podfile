@@ -1,18 +1,22 @@
-platform :ios, '9.0'
+platform :ios, '12.0'
 use_frameworks!
 
 target 'TemplateProject' do
 
-  pod 'Alamofire', '~> 4.7'
+  pod 'Alamofire'
  
-  pod 'Kingfisher', '~> 4.10'
+  pod 'Kingfisher'
 
-  pod 'IQKeyboardManagerSwift', '~> 6.2'
+  pod 'IQKeyboardManagerSwift'
 
-  pod 'FAPanels', '~> 1.0'
+  pod 'FAPanels'
 
-  pod 'SwiftyJSON', '~> 4.2'
+  pod 'SwiftyJSON'
 
-  pod 'PKHUD', '~> 5.2'
+  pod 'PKHUD'
+
+  pod 'FacebookCore'
+
+  pod 'FacebookLogin'
 
 end
