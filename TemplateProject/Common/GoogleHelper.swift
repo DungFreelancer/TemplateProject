@@ -56,13 +56,12 @@ class GoogleHelper: NSObject, GIDSignInDelegate, GIDSignInUIDelegate {
             Log.error(error)
             self.complete!(false, nil)
         } else {
-            Log.debug("User logged in")
-            
             var data: Dictionary<String, Any> = [:]
             data["userId"] = user.userID
             data["name"] = user.profile.name
             data["email"] = user.profile.email
             
+            Log.debug(data)
             self.complete!(true, data)
         }
     }

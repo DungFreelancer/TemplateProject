@@ -12,51 +12,45 @@ import FacebookLogin
 class FacebookHelper {
     
     static let shared = FacebookHelper()
+    
     private let loginManager = LoginManager()
-
+    
     var isLogin: Bool {
         if let _ = AccessToken.current {
             return true
         }
         return false
     }
-
+    
     private init() {}
-
-    func loginFacebook(on vc: UIViewController, complete: @escaping (Bool)->()) {
+    
+    func loginFacebook(on vc: UIViewController, complete: @escaping (Bool, Dictionary<String, Any>?)->()) {
         if self.isLogin {
-            Log.debug("User logged in")
-            complete(true)
+            self.fetchMeWithFacebook(complete: complete)
             return
         }
-
+        
         self.loginManager.logIn(readPermissions: [.publicProfile, .email, .userFriends], viewController: vc) { (loginResult) in
             switch loginResult {
             case .success( _, _, _):
                 Log.debug("User logged in")
-                complete(true)
+                self.fetchMeWithFacebook(complete: complete)
             case .failed(let error):
                 Log.error(error)
-                complete(false)
+                complete(false, nil)
             case .cancelled:
                 Log.debug("User cancelled login")
-                complete(false)
+                complete(false, nil)
             }
         }
     }
-
+    
     func logoutFacebook() {
         Log.debug("User logged out")
         self.loginManager.logOut()
     }
-
-    func fetchMeWithFacebook(complete: @escaping (Bool, Dictionary<String, Any>?)->()) {
-        if !self.isLogin {
-            Log.debug("User not logged in")
-            complete(false, nil)
-            return
-        }
-
+    
+    private func fetchMeWithFacebook(complete: @escaping (Bool, Dictionary<String, Any>?)->()) {
         let connection = GraphRequestConnection()
         connection.add(GraphRequest(graphPath: "/me", parameters: ["fields": "id, name, email"], accessToken: AccessToken.current, httpMethod: .GET, apiVersion: .defaultVersion)) { response, result in
             switch result {
