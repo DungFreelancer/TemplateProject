@@ -23,9 +23,9 @@ extension Date {
         }
         
         self.getCurrentDate { (currentDate) in
-            if (self.daysDiffrenceFromDate(startDate, to: currentDate) < 0) {
+            if (self.daysDiffrence(from: startDate, to: currentDate) < 0) {
                 complete(.PENDING)
-            } else if (self.daysDiffrenceFromDate(endDate, to: currentDate) > 0) {
+            } else if (self.daysDiffrence(from: endDate, to: currentDate) > 0) {
                 complete(.EXPIRES)
             } else {
                 complete(.ACCEPTED)
@@ -56,7 +56,7 @@ extension Date {
         }
     }
     
-    static func daysDiffrenceFromDate(_ startDate: Date, to endDate: Date) -> Int {
+    static func daysDiffrence(from startDate: Date, to endDate: Date) -> Int {
         let calendat: Calendar = Calendar(identifier: .gregorian)
         let startDay: Int = calendat.ordinality(of: .day, in: .era, for: startDate)!
         let endDay: Int = calendat.ordinality(of: .day, in: .era, for: endDate)!
@@ -67,7 +67,7 @@ extension Date {
     func toString(format: String?) -> String? {
         let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.dateFormat = format ?? "yyyy-MM-dd:HH:mm:ss"
-        let date = dateFormatter.string(from: self) 
+        let date = dateFormatter.string(from: self)
         return date
     }
     

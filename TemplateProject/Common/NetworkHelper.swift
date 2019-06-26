@@ -34,17 +34,17 @@ class NetworkHelper {
     
     func get(url: String, complete:((_ success: JSON?,_ error: Error?)->())?) {
         Alamofire.request(url, method: .get).validate().responseJSON { response in
-            self.respone(result: response.result, complete: complete)
+            self.response(result: response.result, complete: complete)
         }
     }
     
     func post(url: String, params: Dictionary<String, Any>, complete:((_ success: JSON?,_ error: Error?)->())?) {
         Alamofire.request(url, method: .post, parameters: params).validate().responseJSON { response in
-            self.respone(result: response.result, complete: complete)
+            self.response(result: response.result, complete: complete)
         }
     }
     
-    private func respone(result: Result<Any>, complete: ((_ success: JSON?,_ error: Error?)->())?) {
+    private func response(result: Result<Any>, complete: ((_ success: JSON?,_ error: Error?)->())?) {
         guard let complete = complete else {
             return
         }

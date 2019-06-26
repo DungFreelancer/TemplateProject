@@ -50,13 +50,13 @@ extension UIView {
         self.layer.cornerRadius = self.frame.size.width / 2
     }
     
-    func setBorderWithRadius(_ radius: Double, color: UIColor) {
+    func setBorder(radius: Double, color: UIColor) {
         self.layer.cornerRadius = CGFloat(radius)
         self.layer.borderWidth = 1
         self.layer.borderColor = color.cgColor
     }
     
-    func setBorderWithRadius(_ radius: Double, color: UIColor, roundingCorners: UIRectCorner) {
+    func setBorder(radius: Double, color: UIColor, roundingCorners: UIRectCorner) {
         let rounded = UIBezierPath(roundedRect: self.layer.bounds,
                                    byRoundingCorners: roundingCorners,
                                    cornerRadii: CGSize(width: CGFloat(radius), height: CGFloat(radius)))
@@ -65,14 +65,14 @@ extension UIView {
         self.layer.mask = shape
     }
     
-    func setShadowWithRadius(_ radius: Double) {
+    func setShadow(radius: Double) {
         self.layer.shadowOffset = CGSize(width: 0, height: 2)
         self.layer.shadowOpacity = 1.0
         self.layer.shadowRadius = CGFloat(radius)
         self.layer.shadowColor = UIColor.gray.cgColor
     }
     
-    func setGradientWithStartColor(_ startColor: UIColor, startPoint: CGPoint, to endColor: UIColor, endPoint: CGPoint) {
+    func setGradient(startColor: UIColor, startPoint: CGPoint, endColor: UIColor, endPoint: CGPoint) {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.bounds
         gradientLayer.colors = [startColor.cgColor, endColor.cgColor]
