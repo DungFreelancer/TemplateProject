@@ -12,7 +12,7 @@ struct HUDHelper {
     
     private init() {}
     
-    static func showLoading(on view:UIView? = APP_DELEGATE.window?.rootViewController?.view) {
+    static func showLoading(on view:UIView? = K.appDelegate.window?.rootViewController?.view) {
         PKHUD.sharedHUD.contentView = ProgressView()
         PKHUD.sharedHUD.show(onView: view)
     }

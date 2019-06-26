@@ -27,7 +27,7 @@ struct Utils {
     
     static func removePersisDomain() {
         let appDomain: String = Bundle.main.bundleIdentifier!
-        USER_DEFAULT.removePersistentDomain(forName: appDomain)
+        K.userDefault.removePersistentDomain(forName: appDomain)
     }
     
     static func applicationDocumentDirectoryString() -> String {

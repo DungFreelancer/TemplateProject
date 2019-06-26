@@ -8,25 +8,28 @@
 
 import UIKit
 
-let DEBUG = true
-
-let USER_DEFAULT: UserDefaults = UserDefaults.standard
-
-let APP_DELEGATE: AppDelegate = UIApplication.shared.delegate as! AppDelegate
-
-let SCREEN_SIZE: CGSize = UIScreen.main.bounds.size
-
-let IS_IPHONE: Bool = UIDevice.current.model == "iPhone"
-
-let IS_LANDSCAPE: Bool = UIApplication.shared.statusBarOrientation.isLandscape
-
-let IS_SIMULATOR: Bool = Bool(exactly: TARGET_OS_SIMULATOR as NSNumber)!
-
-var IOS: Int {
-    get {
-        let currentOS = UIDevice.current.systemVersion
-        let index = currentOS.firstIndex(of: ".") ?? currentOS.endIndex
-        return Int(currentOS[..<index])!
+struct K {
+    
+    static let debug = true
+    
+    static let userDefault: UserDefaults = UserDefaults.standard
+    
+    static let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    static let screenSize: CGSize = UIScreen.main.bounds.size
+    
+    static let isIphone: Bool = UIDevice.current.model == "iPhone"
+    
+    static let isLandscape: Bool = UIApplication.shared.statusBarOrientation.isLandscape
+    
+    static let isSimulator: Bool = Bool(exactly: TARGET_OS_SIMULATOR as NSNumber)!
+    
+    static var iOS: Int {
+        get {
+            let currentOS = UIDevice.current.systemVersion
+            let index = currentOS.firstIndex(of: ".") ?? currentOS.endIndex
+            return Int(currentOS[..<index])!
+        }
     }
+    
 }
-
