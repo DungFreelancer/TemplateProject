@@ -10,6 +10,8 @@ import Foundation
 
 struct Log {
     
+    private init() {}
+    
     static func debug(_ message: Any, filePath: String = #file, function: String = #function, line: Int = #line) {
         if K.debug {
             let fileName = filePath.components(separatedBy: "/").last!

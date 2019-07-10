@@ -10,6 +10,8 @@ import UIKit
 
 struct K {
     
+    private init() {}
+    
     static let debug = true
     
     static let userDefault: UserDefaults = UserDefaults.standard

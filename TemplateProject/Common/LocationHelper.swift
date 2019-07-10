@@ -15,6 +15,8 @@ class LocationHelper {
     
     lazy private var locationManager: CLLocationManager = CLLocationManager()
     
+    private init() {}
+    
     func getLocation() -> CLLocationCoordinate2D {
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.distanceFilter = kCLDistanceFilterNone

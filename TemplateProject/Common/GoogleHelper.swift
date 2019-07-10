@@ -27,8 +27,7 @@ class GoogleHelper: NSObject, GIDSignInDelegate, GIDSignInUIDelegate {
         return false
     }
     
-    private override init() {
-    }
+    private override init() {}
     
     func loginGoogle(on vc: UIViewController, complete: @escaping (Bool, Dictionary<String, Any>?)->()) {
         self.complete = complete

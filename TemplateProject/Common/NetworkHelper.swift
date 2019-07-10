@@ -32,14 +32,14 @@ class NetworkHelper {
         reachabilityManager?.startListening()
     }
     
-    func get(url: String, complete:((_ success: JSON?,_ error: Error?)->())?) {
-        Alamofire.request(url, method: .get).validate().responseJSON { response in
+    func get(url: String, header: Dictionary<String, String>? = nil, complete:((_ success: JSON?,_ error: Error?)->())?) {
+        Alamofire.request(url, method: .get, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
             self.response(result: response.result, complete: complete)
         }
     }
     
-    func post(url: String, params: Dictionary<String, Any>, complete:((_ success: JSON?,_ error: Error?)->())?) {
-        Alamofire.request(url, method: .post, parameters: params).validate().responseJSON { response in
+    func post(url: String, params: Dictionary<String, Any>, header: Dictionary<String, String>? = nil, complete:((_ success: JSON?,_ error: Error?)->())?) {
+        Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
             self.response(result: response.result, complete: complete)
         }
     }
