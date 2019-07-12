@@ -38,10 +38,10 @@ extension Date {
             return
         }
         
-        let urlTime = "http://worldclockapi.com/api/json/utc/now"
-        NetworkHelper.shared.get(url: urlTime) { (json, error) in
-            if let json = json {
-                let strCurrentDate: String = json["currentDateTime"].string!
+        let urlTime = "http://worldtimeapi.org/api/ip"
+        NetworkHelper.shared.get(url: urlTime) { (data, error) in
+            if let data = data, let result = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                let strCurrentDate: String = result["utc_datetime"] as! String
                 let currentDate: Date? = strCurrentDate.toDate(format: "yyyy-MM-dd'T'HH:mmZ");
                 
                 if let currentDate = currentDate {
@@ -50,7 +50,7 @@ extension Date {
                     complete(Date())
                 }
             } else {
-                Log.error(error.debugDescription)
+                Log.e(error.debugDescription)
                 complete(Date())
             }
         }

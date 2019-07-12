@@ -32,27 +32,26 @@ class NetworkHelper {
         reachabilityManager?.startListening()
     }
     
-    func get(url: String, header: Dictionary<String, String>? = nil, complete:((_ success: JSON?,_ error: Error?)->())?) {
+    func get(url: String, header: Dictionary<String, String>? = nil, complete:((_ data: Data?,_ error: Error?)->())?) {
         Alamofire.request(url, method: .get, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
-            self.response(result: response.result, complete: complete)
+            self.response(response, complete: complete)
         }
     }
     
-    func post(url: String, params: Dictionary<String, Any>, header: Dictionary<String, String>? = nil, complete:((_ success: JSON?,_ error: Error?)->())?) {
+    func post(url: String, params: Dictionary<String, Any>, header: Dictionary<String, String>? = nil, complete:((_ data: Data?,_ error: Error?)->())?) {
         Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
-            self.response(result: response.result, complete: complete)
+            self.response(response, complete: complete)
         }
     }
     
-    private func response(result: Result<Any>, complete: ((_ success: JSON?,_ error: Error?)->())?) {
+    private func response(_ response: DataResponse<Any>, complete: ((_ data: Data?,_ error: Error?)->())?) {
         guard let complete = complete else {
             return
         }
         
-        switch result {
-        case .success(let value):
-            let json = JSON(value)
-            complete(json, nil)
+        switch response.result {
+        case .success( _):
+            complete(response.data, nil)
         case .failure(let error):
             complete(nil, error)
         }

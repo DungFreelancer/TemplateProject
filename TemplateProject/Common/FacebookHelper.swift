@@ -33,20 +33,20 @@ class FacebookHelper {
         self.loginManager.logIn(readPermissions: [.publicProfile, .email, .userFriends], viewController: vc) { (loginResult) in
             switch loginResult {
             case .success( _, _, _):
-                Log.debug("User logged in")
+                Log.d("User logged in")
                 self.fetchMeWithFacebook(complete: complete)
             case .failed(let error):
-                Log.error(error)
+                Log.e(error)
                 complete(false, nil)
             case .cancelled:
-                Log.debug("User cancelled login")
+                Log.d("User cancelled login")
                 complete(false, nil)
             }
         }
     }
     
     func logoutFacebook() {
-        Log.debug("User logged out")
+        Log.d("User logged out")
         self.loginManager.logOut()
     }
     
@@ -55,10 +55,10 @@ class FacebookHelper {
         connection.add(GraphRequest(graphPath: "/me", parameters: ["fields": "id, name, email"], accessToken: AccessToken.current, httpMethod: .GET, apiVersion: .defaultVersion)) { response, result in
             switch result {
             case .success(let response):
-                Log.debug(response)
+                Log.d(response)
                 complete(true, response.dictionaryValue)
             case .failed(let error):
-                Log.error(error)
+                Log.e(error)
                 complete(false, nil)
             }
         }

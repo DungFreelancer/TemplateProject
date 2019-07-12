@@ -39,20 +39,20 @@ class GoogleHelper: NSObject, GIDSignInDelegate, GIDSignInUIDelegate {
     }
     
     func logoutGoogle() {
-        Log.debug("User logged out")
+        Log.d("User logged out")
         self.loginManager.signOut()
     }
     
     // MARK: - GIDSignInDelegate
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if !self.isLogin {
-            Log.debug("User not logged in")
+            Log.d("User not logged in")
             self.complete!(false, nil)
             return
         }
         
         if let error = error {
-            Log.error(error)
+            Log.e(error)
             self.complete!(false, nil)
         } else {
             var data: Dictionary<String, Any> = [:]
@@ -60,7 +60,7 @@ class GoogleHelper: NSObject, GIDSignInDelegate, GIDSignInUIDelegate {
             data["name"] = user.profile.name
             data["email"] = user.profile.email
             
-            Log.debug(data)
+            Log.d(data)
             self.complete!(true, data)
         }
     }

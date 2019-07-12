@@ -12,14 +12,14 @@ struct Log {
     
     private init() {}
     
-    static func debug(_ message: Any, filePath: String = #file, function: String = #function, line: Int = #line) {
+    static func d(_ message: Any, filePath: String = #file, function: String = #function, line: Int = #line) {
         if K.debug {
             let fileName = filePath.components(separatedBy: "/").last!
             print("🔵\(fileName)" + "_" + "\(function)[line \(line)]: \(message)🔵")
         }
     }
     
-    static func error(_ message: Any, filePath: String = #file, function: String = #function, line: Int = #line) {
+    static func e(_ message: Any, filePath: String = #file, function: String = #function, line: Int = #line) {
         if K.debug {
             let fileName = filePath.components(separatedBy: "/").last!
             print("🔴\(fileName)" + "_" + "\(function)[line \(line)]: \(message)🔴")
