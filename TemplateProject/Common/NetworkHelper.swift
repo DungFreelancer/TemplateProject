@@ -7,7 +7,6 @@
 //
 
 import Alamofire
-import SwiftyJSON
 
 class NetworkHelper {
     
@@ -30,6 +29,32 @@ class NetworkHelper {
             }
         }
         reachabilityManager?.startListening()
+    }
+    
+    func get<T: Decodable>(url: String, header: Dictionary<String, String>? = nil, type: T.Type, complete:((_ data: T?,_ error: Error?)->())?) {
+        Alamofire.request(url, method: .get, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
+            self.response(response, type: type, complete: complete)
+        }
+    }
+    
+    func post<T: Decodable>(url: String, params: Dictionary<String, Any>, header: Dictionary<String, String>? = nil, type: T.Type, complete:((_ data: T?,_ error: Error?)->())?) {
+        Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
+            self.response(response, type: type, complete: complete)
+        }
+    }
+    
+    private func response<T: Decodable>(_ response: DataResponse<Any>, type: T.Type, complete: ((_ data: T?,_ error: Error?)->())?) {
+        guard let complete = complete else {
+            return
+        }
+        
+        switch response.result {
+        case .success( _):
+            let data = try! JSONDecoder().decode(T.self, from: response.data!)
+            complete(data, nil)
+        case .failure(let error):
+            complete(nil, error)
+        }
     }
     
     func get(url: String, header: Dictionary<String, String>? = nil, complete:((_ data: Data?,_ error: Error?)->())?) {

@@ -18,9 +18,9 @@ extension String {
         return self.trimmingCharacters(in: .whitespacesAndNewlines)
     }
     
-    func toDate(format: String?) -> Date? {
+    func toDate(format: String? = "yyyy-MM-dd:HH:mm:ss") -> Date? {
         let dateFormatter: DateFormatter = DateFormatter()
-        dateFormatter.dateFormat = format ?? "yyyy-MM-dd:HH:mm:ss"
+        dateFormatter.dateFormat = format
         let date = dateFormatter.date(from: self)
         return date
     }

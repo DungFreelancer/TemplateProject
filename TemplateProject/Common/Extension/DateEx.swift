@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import SwiftyJSON
 
 enum DateStatus: Int {
     case ACCEPTED = 0
@@ -41,12 +40,15 @@ extension Date {
         let urlTime = "http://worldtimeapi.org/api/ip"
         NetworkHelper.shared.get(url: urlTime) { (data, error) in
             if let data = data, let result = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                let strCurrentDate: String = result["utc_datetime"] as! String
-                let currentDate: Date? = strCurrentDate.toDate(format: "yyyy-MM-dd'T'HH:mmZ");
+                var strCurrentDate: String = result["utc_datetime"] as! String
+                strCurrentDate = String(strCurrentDate[...strCurrentDate.index(strCurrentDate.startIndex, offsetBy: 18)])
+                let currentDate: Date? = strCurrentDate.toDate(format: "yyyy-MM-dd'T'HH:mm:ss")
                 
                 if let currentDate = currentDate {
+                    Log.d(currentDate)
                     complete(currentDate)
                 } else {
+                    Log.e(Date())
                     complete(Date())
                 }
             } else {

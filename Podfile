@@ -11,8 +11,6 @@ target 'TemplateProject' do
 
   pod 'FAPanels'
 
-  pod 'SwiftyJSON'
-
   pod 'PKHUD'
 
   pod 'FacebookCore'
