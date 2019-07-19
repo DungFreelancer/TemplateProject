@@ -7,6 +7,7 @@
 //
 
 import Alamofire
+import SwiftyJSON
 
 class NetworkHelper {
     
@@ -57,26 +58,26 @@ class NetworkHelper {
         }
     }
     
-    func get(url: String, header: Dictionary<String, String>? = nil, complete:((_ data: Data?,_ error: Error?)->())?) {
+    func get(url: String, header: Dictionary<String, String>? = nil, complete:((_ data: JSON?,_ error: Error?)->())?) {
         Alamofire.request(url, method: .get, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
             self.response(response, complete: complete)
         }
     }
     
-    func post(url: String, params: Dictionary<String, Any>, header: Dictionary<String, String>? = nil, complete:((_ data: Data?,_ error: Error?)->())?) {
+    func post(url: String, params: Dictionary<String, Any>, header: Dictionary<String, String>? = nil, complete:((_ data: JSON?,_ error: Error?)->())?) {
         Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
             self.response(response, complete: complete)
         }
     }
     
-    private func response(_ response: DataResponse<Any>, complete: ((_ data: Data?,_ error: Error?)->())?) {
+    private func response(_ response: DataResponse<Any>, complete: ((_ data: JSON?,_ error: Error?)->())?) {
         guard let complete = complete else {
             return
         }
         
         switch response.result {
-        case .success( _):
-            complete(response.data, nil)
+        case .success(let value):
+            complete(JSON(value), nil)
         case .failure(let error):
             complete(nil, error)
         }

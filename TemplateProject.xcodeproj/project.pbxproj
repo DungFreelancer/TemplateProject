@@ -14,6 +14,9 @@
 		A096529922BB457900FFABD3 /* FacebookHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A096529822BB457900FFABD3 /* FacebookHelper.swift */; };
 		A0BA6DED20A2A45E0041466D /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BA6DEC20A2A45E0041466D /* AlertHelper.swift */; };
 		A0CA6EDA22BB9FC200DA6ED4 /* GoogleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CA6ED922BB9FC200DA6ED4 /* GoogleHelper.swift */; };
+		A0D0479D22E1DB3D006A81D5 /* UIButtonEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D0479A22E1DB3D006A81D5 /* UIButtonEx.swift */; };
+		A0D0479E22E1DB3D006A81D5 /* UILabelEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D0479B22E1DB3D006A81D5 /* UILabelEx.swift */; };
+		A0D0479F22E1DB3D006A81D5 /* UITextFieldEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D0479C22E1DB3D006A81D5 /* UITextFieldEx.swift */; };
 		D0DAE98D6BE3F989484D1456 /* Pods_TemplateProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA573B5AC986056DB03586C /* Pods_TemplateProject.framework */; };
 		E80B521620A0E275000083AE /* UIColorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80B521520A0E275000083AE /* UIColorEx.swift */; };
 		E880D09B1F807803002EEB55 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880D09A1F807803002EEB55 /* Log.swift */; };
@@ -39,6 +42,9 @@
 		A096529822BB457900FFABD3 /* FacebookHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookHelper.swift; sourceTree = "<group>"; };
 		A0BA6DEC20A2A45E0041466D /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		A0CA6ED922BB9FC200DA6ED4 /* GoogleHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleHelper.swift; sourceTree = "<group>"; };
+		A0D0479A22E1DB3D006A81D5 /* UIButtonEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonEx.swift; sourceTree = "<group>"; };
+		A0D0479B22E1DB3D006A81D5 /* UILabelEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelEx.swift; sourceTree = "<group>"; };
+		A0D0479C22E1DB3D006A81D5 /* UITextFieldEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldEx.swift; sourceTree = "<group>"; };
 		BAB76CFD7309A3C94DCD59DA /* Pods-TemplateProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemplateProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TemplateProject/Pods-TemplateProject.debug.xcconfig"; sourceTree = "<group>"; };
 		E80B521520A0E275000083AE /* UIColorEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorEx.swift; sourceTree = "<group>"; };
 		E880D09A1F807803002EEB55 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
@@ -102,6 +108,9 @@
 				A02CB23520888043008D1117 /* DateEx.swift */,
 				9A94BCB520A0B6FA00A60DED /* UIViewEx.swift */,
 				E80B521520A0E275000083AE /* UIColorEx.swift */,
+				A0D0479A22E1DB3D006A81D5 /* UIButtonEx.swift */,
+				A0D0479B22E1DB3D006A81D5 /* UILabelEx.swift */,
+				A0D0479C22E1DB3D006A81D5 /* UITextFieldEx.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -151,9 +160,9 @@
 			isa = PBXGroup;
 			children = (
 				E8A025021F851F5E0082DA91 /* Extension */,
-				E880D09A1F807803002EEB55 /* Log.swift */,
 				E880D09E1F808D5E002EEB55 /* Constants.swift */,
 				E880D0A01F809F4F002EEB55 /* Utils.swift */,
+				E880D09A1F807803002EEB55 /* Log.swift */,
 				E8A21C6A1F87D754008E69DD /* NetworkHelper.swift */,
 				9AB27A2B1F8BC524007BC150 /* HUDHelper.swift */,
 				A0BA6DEC20A2A45E0041466D /* AlertHelper.swift */,
@@ -321,6 +330,7 @@
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -336,6 +346,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -356,10 +367,13 @@
 				E8B892DF1F7FFF8000DDA048 /* BaseVC.swift in Sources */,
 				E8B892DD1F7FFF8000DDA048 /* AppDelegate.swift in Sources */,
 				E8A21C691F87D5D6008E69DD /* StringEx.swift in Sources */,
+				A0D0479E22E1DB3D006A81D5 /* UILabelEx.swift in Sources */,
 				E80B521620A0E275000083AE /* UIColorEx.swift in Sources */,
 				E8A21C6B1F87D754008E69DD /* NetworkHelper.swift in Sources */,
 				E880D0A11F809F4F002EEB55 /* Utils.swift in Sources */,
 				A0CA6EDA22BB9FC200DA6ED4 /* GoogleHelper.swift in Sources */,
+				A0D0479F22E1DB3D006A81D5 /* UITextFieldEx.swift in Sources */,
+				A0D0479D22E1DB3D006A81D5 /* UIButtonEx.swift in Sources */,
 				A02CB23620888043008D1117 /* DateEx.swift in Sources */,
 				9AB27A2C1F8BC524007BC150 /* HUDHelper.swift in Sources */,
 				E880D09B1F807803002EEB55 /* Log.swift in Sources */,

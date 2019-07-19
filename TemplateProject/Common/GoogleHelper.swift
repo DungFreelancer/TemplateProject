@@ -16,7 +16,7 @@ class GoogleHelper: NSObject, GIDSignInDelegate, GIDSignInUIDelegate {
     
     private let loginManager = GIDSignIn.sharedInstance()!
     
-    private var complete: ((Bool, Dictionary<String, Any>?)->())?
+    private var complete: ((Dictionary<String, Any>?, Error?)->())?
     
     private var vc: UIViewController?
     
@@ -29,7 +29,7 @@ class GoogleHelper: NSObject, GIDSignInDelegate, GIDSignInUIDelegate {
     
     private override init() {}
     
-    func loginGoogle(on vc: UIViewController, complete: @escaping (Bool, Dictionary<String, Any>?)->()) {
+    func login(on vc: UIViewController, complete: @escaping (Dictionary<String, Any>?, Error?)->()) {
         self.complete = complete
         self.vc = vc
         
@@ -38,30 +38,26 @@ class GoogleHelper: NSObject, GIDSignInDelegate, GIDSignInUIDelegate {
         self.loginManager.signIn()
     }
     
-    func logoutGoogle() {
-        Log.d("User logged out")
+    func logout() {
         self.loginManager.signOut()
     }
     
     // MARK: - GIDSignInDelegate
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if !self.isLogin {
-            Log.d("User not logged in")
-            self.complete!(false, nil)
+            self.complete!(nil, nil)
             return
         }
         
         if let error = error {
-            Log.e(error)
-            self.complete!(false, nil)
+            self.complete!(nil, error)
         } else {
             var data: Dictionary<String, Any> = [:]
             data["userId"] = user.userID
             data["name"] = user.profile.name
             data["email"] = user.profile.email
             
-            Log.d(data)
-            self.complete!(true, data)
+            self.complete!(data, nil)
         }
     }
     

@@ -16,7 +16,7 @@ struct AlertHelper {
                           title: String?,
                           message: String,
                           mainButton: String,
-                          mainComplete: @escaping (UIAlertAction)->(),
+                          mainComplete: ((UIAlertAction)->())?,
                           otherButton: String? = nil,
                           otherComplete: ((UIAlertAction)->())? = nil) {
         let popup = UIAlertController(title: nil, message: message, preferredStyle: .alert)
@@ -40,7 +40,7 @@ struct AlertHelper {
                                 title: String?,
                                 message: String?,
                                 firstButton: String,
-                                firstComplete: @escaping (UIAlertAction)->(),
+                                firstComplete: ((UIAlertAction)->())?,
                                 secondButton: String? = nil,
                                 secondComplete: ((UIAlertAction)->())? = nil,
                                 thirdButton: String? = nil,

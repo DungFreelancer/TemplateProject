@@ -34,4 +34,17 @@ struct K {
         }
     }
     
+    struct Screens {
+        static let ViewControllers = "ViewControllers"
+    }
+    
+    struct Keys {
+        static let isFirstLaunch = "isFirstLaunch"
+    }
+    
+    struct URLs {
+        static let base               = K.debug ? "https://api-dev.idareu.dirox.dev/api/v1/" : "https://api.idareu.dirox.dev/api/v1/"
+        static var Category           = base + "Category"
+    }
+    
 }

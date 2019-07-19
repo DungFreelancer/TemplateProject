@@ -6,6 +6,8 @@ target 'TemplateProject' do
   pod 'Alamofire'
  
   pod 'Kingfisher'
+  
+  pod 'SwiftyJSON'
 
   pod 'IQKeyboardManagerSwift'
 

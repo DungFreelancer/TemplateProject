@@ -24,42 +24,36 @@ class FacebookHelper {
     
     private init() {}
     
-    func loginFacebook(on vc: UIViewController, complete: @escaping (Bool, Dictionary<String, Any>?)->()) {
+    func login(on vc: UIViewController, complete: @escaping (Dictionary<String, Any>?, Error?)->()) {
         if self.isLogin {
-            self.fetchMeWithFacebook(complete: complete)
+            self.fetchMe(complete: complete)
             return
         }
         
         self.loginManager.logIn(readPermissions: [.publicProfile, .email, .userFriends], viewController: vc) { (loginResult) in
             switch loginResult {
             case .success( _, _, _):
-                Log.d("User logged in")
-                self.fetchMeWithFacebook(complete: complete)
+                self.fetchMe(complete: complete)
             case .failed(let error):
-                Log.e(error)
-                complete(false, nil)
+                complete(nil, error)
             case .cancelled:
-                Log.d("User cancelled login")
-                complete(false, nil)
+                complete(nil, nil)
             }
         }
     }
     
-    func logoutFacebook() {
-        Log.d("User logged out")
+    func logout() {
         self.loginManager.logOut()
     }
     
-    private func fetchMeWithFacebook(complete: @escaping (Bool, Dictionary<String, Any>?)->()) {
+    private func fetchMe(complete: @escaping (Dictionary<String, Any>?, Error?)->()) {
         let connection = GraphRequestConnection()
         connection.add(GraphRequest(graphPath: "/me", parameters: ["fields": "id, name, email"], accessToken: AccessToken.current, httpMethod: .GET, apiVersion: .defaultVersion)) { response, result in
             switch result {
             case .success(let response):
-                Log.d(response)
-                complete(true, response.dictionaryValue)
+                complete(response.dictionaryValue, nil)
             case .failed(let error):
-                Log.e(error)
-                complete(false, nil)
+                complete(nil, error)
             }
         }
         connection.start()

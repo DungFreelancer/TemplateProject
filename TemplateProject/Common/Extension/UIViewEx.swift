@@ -79,7 +79,7 @@ extension UIView {
         gradientLayer.startPoint = startPoint
         gradientLayer.endPoint = endPoint
         
-        self.layer.addSublayer(gradientLayer)
+        self.layer.insertSublayer(gradientLayer, at: 0)
     }
     
     func captureImage() -> UIImage {
