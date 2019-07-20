@@ -36,7 +36,7 @@ struct Utils {
         return documentDirectory
     }
     
-    static func dellay(_ duration: Double, call function: @escaping () -> Void){
+    static func delay(_ duration: Double, call function: @escaping () -> Void){
         DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
             function()
         }

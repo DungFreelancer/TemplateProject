@@ -32,6 +32,10 @@ class NetworkHelper {
         reachabilityManager?.startListening()
     }
     
+    func cancelAll() {
+        Alamofire.SessionManager.default.session.invalidateAndCancel()
+    }
+    
     func get<T: Decodable>(url: String, header: Dictionary<String, String>? = nil, type: T.Type, complete:((_ data: T?,_ error: Error?)->())?) {
         Alamofire.request(url, method: .get, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
             self.response(response, type: type, complete: complete)
