@@ -46,14 +46,14 @@ extension Date {
                 let currentDate: Date? = strCurrentDate.toDate(format: "yyyy-MM-dd'T'HH:mm:ss")
                 
                 if let currentDate = currentDate {
-                    Log.debug(currentDate)
+                    Log.d(currentDate)
                     complete(currentDate)
                 } else {
-                    Log.error(Date())
+                    Log.e(Date())
                     complete(Date())
                 }
             } else {
-                Log.error(error.debugDescription)
+                Log.e(error.debugDescription)
                 complete(Date())
             }
         }
