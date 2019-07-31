@@ -55,7 +55,7 @@ class NetworkHelper {
         
         switch response.result {
         case .success( _):
-            let data = try! JSONDecoder().decode(T.self, from: response.data!)
+            let data = try? JSONDecoder().decode(T.self, from: response.data!)
             complete(data, nil)
         case .failure(let error):
             complete(nil, error)

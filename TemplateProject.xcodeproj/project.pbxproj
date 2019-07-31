@@ -142,7 +142,6 @@
 				E8B892EE1F7FFFF100DDA048 /* Resources */,
 				E8B892F11F80007900DDA048 /* Common */,
 				E8B892F21F8000A600DDA048 /* Models */,
-				E8B892F31F8000B400DDA048 /* ViewModels */,
 				E8B892F41F8000C100DDA048 /* ViewControllers */,
 				E8B892DC1F7FFF8000DDA048 /* AppDelegate.swift */,
 			);
@@ -181,13 +180,6 @@
 			children = (
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		E8B892F31F8000B400DDA048 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		E8B892F41F8000C100DDA048 /* ViewControllers */ = {
