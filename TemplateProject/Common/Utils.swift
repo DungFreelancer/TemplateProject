@@ -43,7 +43,7 @@ struct Utils {
     }
     
     static func checkValid(password: String) -> Bool {
-        let passwordRegEx = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$"
+        let passwordRegEx = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z-/:;()$&@.,?!\'\"\\d]{8,}$"
         let passwordTest = NSPredicate(format:"SELF MATCHES %@", passwordRegEx)
         return passwordTest.evaluate(with: password.trim())
     }
@@ -58,4 +58,13 @@ struct Utils {
         return vc
     }
     
+    static func object<T: Decodable>(from data: Data, type: T.Type) -> T? {
+        return try? JSONDecoder().decode(type, from: data)
+    }
+    
+    static func data<T: Encodable>(from object: T) -> Data? {
+        return try? JSONEncoder().encode(object)
+    }
+    
 }
+

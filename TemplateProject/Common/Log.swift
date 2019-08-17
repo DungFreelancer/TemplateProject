@@ -13,17 +13,18 @@ struct Log {
     private init() {}
     
     static func d(_ message: Any, filePath: String = #file, function: String = #function, line: Int = #line) {
-        if K.debug {
-            let fileName = filePath.components(separatedBy: "/").last!
-            print("🔵\(fileName)" + "_" + "\(function)[line \(line)]: \(message)🔵")
-        }
+        #if !PRO
+        let fileName = filePath.components(separatedBy: "/").last!
+        print("🔵\(fileName)" + "_" + "\(function)[line \(line)]: \(message)🔵")
+        #endif
     }
     
     static func e(_ message: Any, filePath: String = #file, function: String = #function, line: Int = #line) {
-        if K.debug {
-            let fileName = filePath.components(separatedBy: "/").last!
-            print("🔴\(fileName)" + "_" + "\(function)[line \(line)]: \(message)🔴")
-        }
+        #if !PRO
+        let fileName = filePath.components(separatedBy: "/").last!
+        print("🔴\(fileName)" + "_" + "\(function)[line \(line)]: \(message)🔴")
+        #endif
     }
     
 }
+

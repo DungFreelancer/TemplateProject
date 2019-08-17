@@ -39,7 +39,7 @@ extension Date {
         }
         
         let urlTime = "http://worldtimeapi.org/api/ip"
-        NetworkHelper.shared.get(url: urlTime) { (data, error) in
+        K.net.get(url: urlTime) { (data, error) in
             if let data = data {
                 var strCurrentDate: String = data["utc_datetime"].stringValue
                 strCurrentDate = String(strCurrentDate[...strCurrentDate.index(strCurrentDate.startIndex, offsetBy: 18)])
@@ -67,11 +67,13 @@ extension Date {
         return endDay - startDay
     }
     
-    func toString(format: String = "yyyy-MM-dd:HH:mm:ss") -> String? {
+    func toString(format: String = K.defaultDateFormat, isUTC: Bool = false) -> String? {
         let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
+        dateFormatter.timeZone = isUTC ? TimeZone(identifier: "UTC") : nil
         let date = dateFormatter.string(from: self)
         return date
     }
     
 }
+

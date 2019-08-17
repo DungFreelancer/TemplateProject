@@ -36,14 +36,25 @@ class NetworkHelper {
         Alamofire.SessionManager.default.session.invalidateAndCancel()
     }
     
-    func get<T: Decodable>(url: String, header: Dictionary<String, String>? = nil, type: T.Type, complete:((_ data: T?,_ error: Error?)->())?) {
-        Alamofire.request(url, method: .get, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
+    private func initHeaders(headers: Dictionary<String, String>?) -> Dictionary<String, String>? {
+        if let headers = headers {
+            return headers
+        }
+//        if let accessToken = K.accessToken {
+//            return ["Authorization" : accessToken]
+//        }
+        return nil
+    }
+
+    
+    func get<T: Decodable>(url: String, headers: Dictionary<String, String>? = nil, type: T.Type, complete:((_ data: T?,_ error: Error?)->())?) {
+        Alamofire.request(url, method: .get, encoding: JSONEncoding.default, headers: self.initHeaders(headers: headers)).responseJSON { (response) in
             self.response(response, type: type, complete: complete)
         }
     }
     
-    func post<T: Decodable>(url: String, params: Dictionary<String, Any>, header: Dictionary<String, String>? = nil, type: T.Type, complete:((_ data: T?,_ error: Error?)->())?) {
-        Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
+    func post<T: Decodable>(url: String, params: Dictionary<String, Any>, headers: Dictionary<String, String>? = nil, type: T.Type, complete:((_ data: T?,_ error: Error?)->())?) {
+        Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: self.initHeaders(headers: headers)).responseJSON { (response) in
             self.response(response, type: type, complete: complete)
         }
     }
@@ -62,15 +73,30 @@ class NetworkHelper {
         }
     }
     
-    func get(url: String, header: Dictionary<String, String>? = nil, complete:((_ data: JSON?,_ error: Error?)->())?) {
-        Alamofire.request(url, method: .get, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
+    func get(url: String, headers: Dictionary<String, String>? = nil, complete:((_ data: JSON?,_ error: Error?)->())?) {
+        Alamofire.request(url, method: .get, encoding: JSONEncoding.default, headers: self.initHeaders(headers: headers)).responseJSON { (response) in
             self.response(response, complete: complete)
         }
     }
     
-    func post(url: String, params: Dictionary<String, Any>, header: Dictionary<String, String>? = nil, complete:((_ data: JSON?,_ error: Error?)->())?) {
-        Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
+    func post(url: String, params: Dictionary<String, Any>, headers: Dictionary<String, String>? = nil, complete:((_ data: JSON?,_ error: Error?)->())?) {
+        Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: self.initHeaders(headers: headers)).responseJSON { (response) in
             self.response(response, complete: complete)
+        }
+    }
+    
+    func upload(_ data: Data, to url: String, headers: Dictionary<String, String>? = nil, complete:((_ data: JSON?,_ error: Error?)->())?) {
+        Alamofire.upload(multipartFormData: { (multipartFormData) in
+            multipartFormData.append(data, withName: "image", fileName: "image.png", mimeType: "image/png")
+        }, usingThreshold: UInt64.init(), to: url, method: .post, headers: self.initHeaders(headers: headers)) { (result) in
+            switch result {
+            case .success(let upload, _, _):
+                upload.responseJSON(completionHandler: { (response) in
+                    self.response(response, complete: complete)
+                })
+            case .failure(let error):
+                complete!(nil, error)
+            }
         }
     }
     

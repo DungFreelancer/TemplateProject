@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1846E11B23079DAA007E3021 /* FacebookSMSHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846E11A23079DAA007E3021 /* FacebookSMSHelper.swift */; };
 		9A94BCB620A0B6FA00A60DED /* UIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A94BCB520A0B6FA00A60DED /* UIViewEx.swift */; };
 		9AB27A2C1F8BC524007BC150 /* HUDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB27A2B1F8BC524007BC150 /* HUDHelper.swift */; };
 		A00A48D422B8E62000361448 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00A48D322B8E62000361448 /* LocationHelper.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1846E11A23079DAA007E3021 /* FacebookSMSHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookSMSHelper.swift; sourceTree = "<group>"; };
 		3C07B82D8CE755958618B85F /* Pods-TemplateProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemplateProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TemplateProject/Pods-TemplateProject.release.xcconfig"; sourceTree = "<group>"; };
 		8BA573B5AC986056DB03586C /* Pods_TemplateProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TemplateProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A94BCB520A0B6FA00A60DED /* UIViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewEx.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				A0BA6DEC20A2A45E0041466D /* AlertHelper.swift */,
 				A00A48D322B8E62000361448 /* LocationHelper.swift */,
 				A096529822BB457900FFABD3 /* FacebookHelper.swift */,
+				1846E11A23079DAA007E3021 /* FacebookSMSHelper.swift */,
 				A0CA6ED922BB9FC200DA6ED4 /* GoogleHelper.swift */,
 				A021C89822EE9D35000649BA /* FileHelper.swift */,
 			);
@@ -295,10 +298,12 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TemplateProject/Pods-TemplateProject-resources.sh",
+				"${PODS_ROOT}/AccountKit/AccountKitStrings.bundle",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccountKitStrings.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,7 +320,6 @@
 				"${PODS_ROOT}/Target Support Files/Pods-TemplateProject/Pods-TemplateProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/FAPanels/FAPanels.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
@@ -331,7 +335,6 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FAPanels.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
@@ -371,6 +374,7 @@
 				A0D0479D22E1DB3D006A81D5 /* UIButtonEx.swift in Sources */,
 				A02CB23620888043008D1117 /* DateEx.swift in Sources */,
 				9AB27A2C1F8BC524007BC150 /* HUDHelper.swift in Sources */,
+				1846E11B23079DAA007E3021 /* FacebookSMSHelper.swift in Sources */,
 				E880D09B1F807803002EEB55 /* Log.swift in Sources */,
 				A00A48D422B8E62000361448 /* LocationHelper.swift in Sources */,
 				E880D09F1F808D5E002EEB55 /* Constants.swift in Sources */,

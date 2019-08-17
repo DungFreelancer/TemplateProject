@@ -12,9 +12,9 @@ struct K {
     
     private init() {}
     
-    static let debug = true
-    
     static let userDefault: UserDefaults = UserDefaults.standard
+    
+    static let net: NetworkHelper = NetworkHelper.shared
     
     static let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -34,17 +34,36 @@ struct K {
         }
     }
     
+    static var isLaunchedBefore: Bool {
+        set {
+            K.userDefault.set(newValue, forKey: K.Keys.isLaunchedBefore)
+        }
+        get {
+            return K.userDefault.bool(forKey: K.Keys.isLaunchedBefore)
+        }
+    }
+    
+    static let defaultDateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+    
     struct Screens {
         static let ViewControllers = "ViewControllers"
     }
     
     struct Keys {
-        static let isFirstLaunch = "isFirstLaunch"
+        static let isLaunchedBefore = "isLaunchedBefore"
     }
     
     struct URLs {
-        static let base               = K.debug ? "https://api-dev.idareu.dirox.dev/api/v1/" : "https://api.idareu.dirox.dev/api/v1/"
-        static var Category           = base + "Category"
+        #if DEV
+        static let base               = "https://api-dev.idareu.dirox.dev/api/v1"
+        #elseif STAGING
+        static let base               = "https://api.idareu.dirox.dev/api/v1"
+        #else
+        static let base               = "https://api.idareu.dirox.dev/api/v1"
+        #endif
+        
+        static var Files              = base + "/Files"
     }
     
 }
+

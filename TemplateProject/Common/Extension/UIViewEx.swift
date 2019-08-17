@@ -50,10 +50,11 @@ extension UIView {
         self.layer.cornerRadius = self.frame.size.width / 2
     }
     
-    func setBorder(radius: Double, color: UIColor) {
+    func setBorder(radius: Double, width: Float? = 1.0, color: UIColor? = .clear, clip: Bool? = false) {
+        self.clipsToBounds = clip!
         self.layer.cornerRadius = CGFloat(radius)
-        self.layer.borderWidth = 1
-        self.layer.borderColor = color.cgColor
+        self.layer.borderWidth = CGFloat(width!)
+        self.layer.borderColor = color!.cgColor
     }
     
     func setBorder(radius: Double, color: UIColor, roundingCorners: UIRectCorner) {
@@ -67,7 +68,7 @@ extension UIView {
     
     func setShadow(radius: Double) {
         self.layer.shadowOffset = CGSize(width: 0, height: 2)
-        self.layer.shadowOpacity = 1.0
+        self.layer.shadowOpacity = 0.2
         self.layer.shadowRadius = CGFloat(radius)
         self.layer.shadowColor = UIColor.gray.cgColor
     }
