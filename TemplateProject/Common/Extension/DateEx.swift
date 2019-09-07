@@ -43,7 +43,7 @@ extension Date {
             if let data = data {
                 var strCurrentDate: String = data["utc_datetime"].stringValue
                 strCurrentDate = String(strCurrentDate[...strCurrentDate.index(strCurrentDate.startIndex, offsetBy: 18)])
-                let currentDate: Date? = strCurrentDate.toDate(format: "yyyy-MM-dd'T'HH:mm:ss")
+                let currentDate: Date? = strCurrentDate.toDate(format: K.defaultDateFormat)
                 
                 if let currentDate = currentDate {
                     Log.d(currentDate)
@@ -64,16 +64,17 @@ extension Date {
         let startDay: Int = calendat.ordinality(of: .day, in: .era, for: startDate)!
         let endDay: Int = calendat.ordinality(of: .day, in: .era, for: endDate)!
         
+        // 0: today, 1: tomorrow, ...
         return endDay - startDay
     }
     
-    func toString(format: String = K.defaultDateFormat, isUTC: Bool = false) -> String? {
+    func toString(format: String = K.defaultDateFormat, isUTC: Bool = true) -> String? {
         let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
-        dateFormatter.timeZone = isUTC ? TimeZone(identifier: "UTC") : nil
+        dateFormatter.timeZone = isUTC ? TimeZone(abbreviation: "UTC") : nil
         let date = dateFormatter.string(from: self)
+        
         return date
     }
     
 }
-

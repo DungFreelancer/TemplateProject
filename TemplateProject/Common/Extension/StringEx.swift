@@ -18,11 +18,16 @@ extension String {
         return self.trimmingCharacters(in: .whitespacesAndNewlines)
     }
     
-    func toDate(format: String = "yyyy-MM-dd:HH:mm:ss") -> Date? {
+    func toDate(format: String = K.defaultDateFormat) -> Date? {
         let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
         let date = dateFormatter.date(from: self)
         return date
+    }
+
+    
+    func uppercasedFirst() -> String {
+        return prefix(1).capitalized + dropFirst()
     }
     
 }

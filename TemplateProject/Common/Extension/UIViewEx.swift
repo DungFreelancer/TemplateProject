@@ -66,11 +66,11 @@ extension UIView {
         self.layer.mask = shape
     }
     
-    func setShadow(radius: Double) {
+    func setShadow(radius: Double, opacity: Float = 0.2, color: UIColor = .gray) {
         self.layer.shadowOffset = CGSize(width: 0, height: 2)
-        self.layer.shadowOpacity = 0.2
+        self.layer.shadowOpacity = opacity
         self.layer.shadowRadius = CGFloat(radius)
-        self.layer.shadowColor = UIColor.gray.cgColor
+        self.layer.shadowColor = color.cgColor
     }
     
     func setGradient(startColor: UIColor, startPoint: CGPoint, endColor: UIColor, endPoint: CGPoint) {

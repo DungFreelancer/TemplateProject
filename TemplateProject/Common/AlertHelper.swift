@@ -13,16 +13,16 @@ struct AlertHelper {
     private init() {}
     
     static func showPopup(on viewController: UIViewController,
-                          title: String?,
-                          message: String,
+                          title: String,
+                          message: String?,
                           mainButton: String,
                           mainComplete: ((UIAlertAction)->())?,
                           otherButton: String? = nil,
                           otherComplete: ((UIAlertAction)->())? = nil) {
-        let popup = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        let popup = UIAlertController(title: title, message: nil, preferredStyle: .alert)
         
-        if title != nil && title != "" {
-            popup.title = title
+        if message != nil && message != "" {
+            popup.message = message
         }
         
         let mainAction = UIAlertAction(title: mainButton, style: .default, handler: mainComplete)
@@ -37,7 +37,7 @@ struct AlertHelper {
     }
     
     static func showActionSheet(on viewController: UIViewController,
-                                title: String?,
+                                title: String,
                                 message: String?,
                                 firstButton: String,
                                 firstComplete: ((UIAlertAction)->())?,
@@ -45,11 +45,8 @@ struct AlertHelper {
                                 secondComplete: ((UIAlertAction)->())? = nil,
                                 thirdButton: String? = nil,
                                 thirdComplete: ((UIAlertAction)->())? = nil) {
-        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let actionSheet = UIAlertController(title: title, message: nil, preferredStyle: .actionSheet)
         
-        if title != nil && title != "" {
-            actionSheet.title = title
-        }
         if message != nil && message != "" {
             actionSheet.message = message
         }

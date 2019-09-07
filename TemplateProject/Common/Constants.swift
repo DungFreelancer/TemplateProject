@@ -22,6 +22,8 @@ struct K {
     
     static let isIphone: Bool = UIDevice.current.model == "iPhone"
     
+    static let isIphoneX: Bool = K.appDelegate.window!.safeAreaInsets.top > 20.0
+    
     static let isLandscape: Bool = UIApplication.shared.statusBarOrientation.isLandscape
     
     static let isSimulator: Bool = Bool(exactly: TARGET_OS_SIMULATOR as NSNumber)!
@@ -43,7 +45,9 @@ struct K {
         }
     }
     
-    static let defaultDateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+    static let defaultDateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+    
+    static let defaultImageCompression: CGFloat = 5.0
     
     struct Screens {
         static let ViewControllers = "ViewControllers"

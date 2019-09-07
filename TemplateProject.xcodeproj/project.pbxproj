@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1846E11B23079DAA007E3021 /* FacebookSMSHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846E11A23079DAA007E3021 /* FacebookSMSHelper.swift */; };
+		18D1CF6A2323556C002B3E1F /* CameraHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1CF692323556C002B3E1F /* CameraHelper.swift */; };
 		9A94BCB620A0B6FA00A60DED /* UIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A94BCB520A0B6FA00A60DED /* UIViewEx.swift */; };
 		9AB27A2C1F8BC524007BC150 /* HUDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB27A2B1F8BC524007BC150 /* HUDHelper.swift */; };
 		A00A48D422B8E62000361448 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00A48D322B8E62000361448 /* LocationHelper.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		1846E11A23079DAA007E3021 /* FacebookSMSHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookSMSHelper.swift; sourceTree = "<group>"; };
+		18D1CF692323556C002B3E1F /* CameraHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraHelper.swift; sourceTree = "<group>"; };
 		3C07B82D8CE755958618B85F /* Pods-TemplateProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemplateProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TemplateProject/Pods-TemplateProject.release.xcconfig"; sourceTree = "<group>"; };
 		8BA573B5AC986056DB03586C /* Pods_TemplateProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TemplateProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A94BCB520A0B6FA00A60DED /* UIViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewEx.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				1846E11A23079DAA007E3021 /* FacebookSMSHelper.swift */,
 				A0CA6ED922BB9FC200DA6ED4 /* GoogleHelper.swift */,
 				A021C89822EE9D35000649BA /* FileHelper.swift */,
+				18D1CF692323556C002B3E1F /* CameraHelper.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				E8A21C6B1F87D754008E69DD /* NetworkHelper.swift in Sources */,
 				E880D0A11F809F4F002EEB55 /* Utils.swift in Sources */,
 				A0CA6EDA22BB9FC200DA6ED4 /* GoogleHelper.swift in Sources */,
+				18D1CF6A2323556C002B3E1F /* CameraHelper.swift in Sources */,
 				A0D0479F22E1DB3D006A81D5 /* UITextFieldEx.swift in Sources */,
 				A0D0479D22E1DB3D006A81D5 /* UIButtonEx.swift in Sources */,
 				A02CB23620888043008D1117 /* DateEx.swift in Sources */,
