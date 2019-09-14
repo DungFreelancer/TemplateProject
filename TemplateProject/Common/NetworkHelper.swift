@@ -32,10 +32,6 @@ class NetworkHelper {
         reachabilityManager?.startListening()
     }
     
-    func cancelAll() {
-        Alamofire.SessionManager.default.session.invalidateAndCancel()
-    }
-    
     private func initHeaders(headers: Dictionary<String, String>?) -> Dictionary<String, String>? {
         if let headers = headers {
             return headers
