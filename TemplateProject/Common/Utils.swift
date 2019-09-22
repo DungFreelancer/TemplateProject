@@ -30,6 +30,12 @@ struct Utils {
         K.userDefault.removePersistentDomain(forName: appDomain)
     }
     
+    static func applicationDocumentDirectoryString() -> String {
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let documentDirectory = paths[0]
+        return documentDirectory
+    }
+    
     static func delay(_ duration: Double, call function: @escaping () -> Void){
         DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
             function()
