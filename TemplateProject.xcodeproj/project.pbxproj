@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1846D4A523426164003CA96F /* CollectionEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846D4A423426164003CA96F /* CollectionEx.swift */; };
 		1846E11B23079DAA007E3021 /* FacebookSMSHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846E11A23079DAA007E3021 /* FacebookSMSHelper.swift */; };
 		18D1CF6A2323556C002B3E1F /* CameraHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1CF692323556C002B3E1F /* CameraHelper.swift */; };
 		9A94BCB620A0B6FA00A60DED /* UIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A94BCB520A0B6FA00A60DED /* UIViewEx.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1846D4A423426164003CA96F /* CollectionEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionEx.swift; sourceTree = "<group>"; };
 		1846E11A23079DAA007E3021 /* FacebookSMSHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookSMSHelper.swift; sourceTree = "<group>"; };
 		18D1CF692323556C002B3E1F /* CameraHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraHelper.swift; sourceTree = "<group>"; };
 		3C07B82D8CE755958618B85F /* Pods-TemplateProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemplateProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TemplateProject/Pods-TemplateProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			children = (
 				E8A025031F851F890082DA91 /* UIImageViewEx.swift */,
 				E8A21C681F87D5D6008E69DD /* StringEx.swift */,
+				1846D4A423426164003CA96F /* CollectionEx.swift */,
 				A02CB23520888043008D1117 /* DateEx.swift */,
 				9A94BCB520A0B6FA00A60DED /* UIViewEx.swift */,
 				E80B521520A0E275000083AE /* UIColorEx.swift */,
@@ -373,6 +376,7 @@
 				E8A21C6B1F87D754008E69DD /* NetworkHelper.swift in Sources */,
 				E880D0A11F809F4F002EEB55 /* Utils.swift in Sources */,
 				A0CA6EDA22BB9FC200DA6ED4 /* GoogleHelper.swift in Sources */,
+				1846D4A523426164003CA96F /* CollectionEx.swift in Sources */,
 				18D1CF6A2323556C002B3E1F /* CameraHelper.swift in Sources */,
 				A0D0479F22E1DB3D006A81D5 /* UITextFieldEx.swift in Sources */,
 				A0D0479D22E1DB3D006A81D5 /* UIButtonEx.swift in Sources */,
