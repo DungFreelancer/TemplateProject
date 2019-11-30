@@ -30,7 +30,7 @@ class FacebookHelper {
             return
         }
         
-        self.loginManager.logIn(readPermissions: [.publicProfile, .email, .userFriends], viewController: vc) { (loginResult) in
+        self.loginManager.logIn(permissions: [.publicProfile, .email, .userFriends], viewController: vc) { (loginResult) in
             switch loginResult {
             case .success( _, _, _):
                 self.fetchMe(complete: complete)
@@ -48,11 +48,11 @@ class FacebookHelper {
     
     private func fetchMe(complete: @escaping (Dictionary<String, Any>?, Error?)->()) {
         let connection = GraphRequestConnection()
-        connection.add(GraphRequest(graphPath: "/me", parameters: ["fields": "id, name, email"], accessToken: AccessToken.current, httpMethod: .GET, apiVersion: .defaultVersion)) { response, result in
-            switch result {
-            case .success(let response):
-                complete(response.dictionaryValue, nil)
-            case .failed(let error):
+        connection.add(GraphRequest(graphPath: "/me", parameters: ["fields": "id, name, email"], tokenString: AccessToken.current?.tokenString, version: Settings.defaultGraphAPIVersion, httpMethod: .get)) { (httpResponse, result, error) in
+            if var result = result as? [String:String] {
+                result["accessToken"] = AccessToken.current!.tokenString
+                complete(result, nil)
+            } else {
                 complete(nil, error)
             }
         }

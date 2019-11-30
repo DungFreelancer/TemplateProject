@@ -34,4 +34,13 @@ extension UIButton {
         }
     }
     
+    override open func sendAction(_ action: Selector, to target: Any?, for event: UIEvent?) {
+        super.sendAction(action, to: target, for: event)
+        
+        self.isUserInteractionEnabled = false
+        Utils.delay(0.5) {
+            self.isUserInteractionEnabled = true
+        }
+    }
+    
 }

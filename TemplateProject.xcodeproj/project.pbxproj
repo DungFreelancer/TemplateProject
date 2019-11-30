@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1846D4A523426164003CA96F /* CollectionEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846D4A423426164003CA96F /* CollectionEx.swift */; };
-		1846E11B23079DAA007E3021 /* FacebookSMSHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846E11A23079DAA007E3021 /* FacebookSMSHelper.swift */; };
 		18D1CF6A2323556C002B3E1F /* CameraHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1CF692323556C002B3E1F /* CameraHelper.swift */; };
+		9A6127192392811300BB5FE6 /* UIRefreshControlEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6127182392811300BB5FE6 /* UIRefreshControlEx.swift */; };
+		9A61271B2392828500BB5FE6 /* FirebaseSMSHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A61271A2392828500BB5FE6 /* FirebaseSMSHelper.swift */; };
+		9A61271D239282B600BB5FE6 /* TwitterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A61271C239282B600BB5FE6 /* TwitterHelper.swift */; };
 		9A94BCB620A0B6FA00A60DED /* UIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A94BCB520A0B6FA00A60DED /* UIViewEx.swift */; };
 		9AB27A2C1F8BC524007BC150 /* HUDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB27A2B1F8BC524007BC150 /* HUDHelper.swift */; };
 		A00A48D422B8E62000361448 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00A48D322B8E62000361448 /* LocationHelper.swift */; };
@@ -38,10 +40,12 @@
 
 /* Begin PBXFileReference section */
 		1846D4A423426164003CA96F /* CollectionEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionEx.swift; sourceTree = "<group>"; };
-		1846E11A23079DAA007E3021 /* FacebookSMSHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookSMSHelper.swift; sourceTree = "<group>"; };
 		18D1CF692323556C002B3E1F /* CameraHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraHelper.swift; sourceTree = "<group>"; };
 		3C07B82D8CE755958618B85F /* Pods-TemplateProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemplateProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TemplateProject/Pods-TemplateProject.release.xcconfig"; sourceTree = "<group>"; };
 		8BA573B5AC986056DB03586C /* Pods_TemplateProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TemplateProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A6127182392811300BB5FE6 /* UIRefreshControlEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRefreshControlEx.swift; sourceTree = "<group>"; };
+		9A61271A2392828500BB5FE6 /* FirebaseSMSHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseSMSHelper.swift; sourceTree = "<group>"; };
+		9A61271C239282B600BB5FE6 /* TwitterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterHelper.swift; sourceTree = "<group>"; };
 		9A94BCB520A0B6FA00A60DED /* UIViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewEx.swift; sourceTree = "<group>"; };
 		9AB27A2B1F8BC524007BC150 /* HUDHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDHelper.swift; sourceTree = "<group>"; };
 		A00A48D322B8E62000361448 /* LocationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 				A0D0479A22E1DB3D006A81D5 /* UIButtonEx.swift */,
 				A0D0479B22E1DB3D006A81D5 /* UILabelEx.swift */,
 				A0D0479C22E1DB3D006A81D5 /* UITextFieldEx.swift */,
+				9A6127182392811300BB5FE6 /* UIRefreshControlEx.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -176,10 +181,11 @@
 				A0BA6DEC20A2A45E0041466D /* AlertHelper.swift */,
 				A00A48D322B8E62000361448 /* LocationHelper.swift */,
 				A096529822BB457900FFABD3 /* FacebookHelper.swift */,
-				1846E11A23079DAA007E3021 /* FacebookSMSHelper.swift */,
 				A0CA6ED922BB9FC200DA6ED4 /* GoogleHelper.swift */,
 				A021C89822EE9D35000649BA /* FileHelper.swift */,
 				18D1CF692323556C002B3E1F /* CameraHelper.swift */,
+				9A61271A2392828500BB5FE6 /* FirebaseSMSHelper.swift */,
+				9A61271C239282B600BB5FE6 /* TwitterHelper.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -304,13 +310,13 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TemplateProject/Pods-TemplateProject-resources.sh",
-				"${PODS_ROOT}/AccountKit/AccountKitStrings.bundle",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccountKitStrings.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -325,32 +331,40 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TemplateProject/Pods-TemplateProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMAppAuth/GTMAppAuth.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMAppAuth.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -370,6 +384,7 @@
 				E8A025041F851F890082DA91 /* UIImageViewEx.swift in Sources */,
 				E8B892DF1F7FFF8000DDA048 /* BaseVC.swift in Sources */,
 				E8B892DD1F7FFF8000DDA048 /* AppDelegate.swift in Sources */,
+				9A6127192392811300BB5FE6 /* UIRefreshControlEx.swift in Sources */,
 				E8A21C691F87D5D6008E69DD /* StringEx.swift in Sources */,
 				A0D0479E22E1DB3D006A81D5 /* UILabelEx.swift in Sources */,
 				E80B521620A0E275000083AE /* UIColorEx.swift in Sources */,
@@ -382,7 +397,8 @@
 				A0D0479D22E1DB3D006A81D5 /* UIButtonEx.swift in Sources */,
 				A02CB23620888043008D1117 /* DateEx.swift in Sources */,
 				9AB27A2C1F8BC524007BC150 /* HUDHelper.swift in Sources */,
-				1846E11B23079DAA007E3021 /* FacebookSMSHelper.swift in Sources */,
+				9A61271B2392828500BB5FE6 /* FirebaseSMSHelper.swift in Sources */,
+				9A61271D239282B600BB5FE6 /* TwitterHelper.swift in Sources */,
 				E880D09B1F807803002EEB55 /* Log.swift in Sources */,
 				A00A48D422B8E62000361448 /* LocationHelper.swift in Sources */,
 				E880D09F1F808D5E002EEB55 /* Constants.swift in Sources */,

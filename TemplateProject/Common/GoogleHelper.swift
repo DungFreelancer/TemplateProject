@@ -8,17 +8,15 @@
 
 import GoogleSignIn
 
-class GoogleHelper: NSObject, GIDSignInDelegate, GIDSignInUIDelegate {
+class GoogleHelper: NSObject, GIDSignInDelegate {
     
-    static let clientID = "330883660964-ntdu9rng54bd2jebvbfqp40jud55g7i1.apps.googleusercontent.com"
+    static let clientID = "601387200679-mbe30uea2pir2d8f8htk30hhkuqvbk4v.apps.googleusercontent.com"
     
     static let shared = GoogleHelper()
     
     private let loginManager = GIDSignIn.sharedInstance()!
     
     private var complete: ((Dictionary<String, Any>?, Error?)->())?
-    
-    private var vc: UIViewController?
     
     var isLogin: Bool {
         if let user = loginManager.currentUser, let _ = user.authentication {
@@ -31,10 +29,9 @@ class GoogleHelper: NSObject, GIDSignInDelegate, GIDSignInUIDelegate {
     
     func login(on vc: UIViewController, complete: @escaping (Dictionary<String, Any>?, Error?)->()) {
         self.complete = complete
-        self.vc = vc
         
         self.loginManager.delegate = self
-        self.loginManager.uiDelegate = self
+        self.loginManager.presentingViewController = vc
         self.loginManager.signIn()
     }
     
@@ -56,26 +53,10 @@ class GoogleHelper: NSObject, GIDSignInDelegate, GIDSignInUIDelegate {
             data["userId"] = user.userID
             data["name"] = user.profile.name
             data["email"] = user.profile.email
+            data["accessToken"] = user.authentication.accessToken
             
             self.complete!(data, nil)
         }
-    }
-    
-    // MARK: - GIDSignInUIDelegate
-    // Stop the UIActivityIndicatorView animation that was started when the user
-    // pressed the Sign In button
-    func sign(inWillDispatch signIn: GIDSignIn!, error: Error!) {
-        
-    }
-    
-    // Present a view that prompts the user to sign in with Google
-    func sign(_ signIn: GIDSignIn!, present viewController: UIViewController!) {
-        self.vc?.present(viewController, animated: true, completion: nil)
-    }
-    
-    // Dismiss the "Sign in with Google" view
-    func sign(_ signIn: GIDSignIn!, dismiss viewController: UIViewController!) {
-        self.vc?.dismiss(animated: true, completion: nil)
     }
     
 }

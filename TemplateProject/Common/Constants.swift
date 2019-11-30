@@ -28,6 +28,8 @@ struct K {
     
     static let isSimulator: Bool = Bool(exactly: TARGET_OS_SIMULATOR as NSNumber)!
     
+    static let deviceID: String? = UIDevice.current.identifierForVendor?.uuidString
+    
     static var iOS: Int {
         get {
             let currentOS = UIDevice.current.systemVersion
@@ -48,6 +50,13 @@ struct K {
     static let defaultDateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
     
     static let defaultImageCompression: CGFloat = 5.0
+    
+    struct AppFont {
+        static let Regular  = "SourceSansPro-Regular"
+        static let Black    = "SourceSansPro-Black"
+        static let Semibold = "SourceSansPro-Semibold"
+        static let Light    = "SourceSansPro-Light"
+    }
     
     struct Screens {
         static let ViewControllers = "ViewControllers"

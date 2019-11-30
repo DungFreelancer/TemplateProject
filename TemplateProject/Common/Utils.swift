@@ -49,7 +49,7 @@ struct Utils {
     }
     
     static func checkValid(password: String) -> Bool {
-        let passwordRegEx = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z-/:;()$&@.,?!\'\"\\d]{8,}$"
+        let passwordRegEx = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\W\\d]{8,}$"
         let passwordTest = NSPredicate(format:"SELF MATCHES %@", passwordRegEx)
         return passwordTest.evaluate(with: password.trim())
     }

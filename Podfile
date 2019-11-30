@@ -10,6 +10,8 @@ target 'TemplateProject' do
   pod 'PKHUD'
   pod 'FacebookCore'
   pod 'FacebookLogin'
-  pod 'AccountKit'
   pod 'GoogleSignIn'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
+  pod 'TwitterKit'
 end

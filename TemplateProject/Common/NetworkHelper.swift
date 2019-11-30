@@ -21,6 +21,12 @@ class NetworkHelper {
     
     private init() {}
     
+    func cancelAll() {
+        Alamofire.SessionManager.default.session.getAllTasks { (tasks) in
+            tasks.forEach{ $0.cancel() }
+        }
+    }
+    
     func connectionStatusChange(_ isConnected: @escaping (Bool)->()) {
         reachabilityManager?.listener = { status in
             if (status != .unknown && status != .notReachable) {

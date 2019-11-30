@@ -68,6 +68,31 @@ extension Date {
         return endDay - startDay
     }
     
+    func relativeString() -> String {
+        let now = Date()
+        let components = Calendar.current.dateComponents([.minute, .hour, .day, .weekOfMonth, .month], from: self, to: now)
+
+        let month = components.month ?? 0
+        let weeks = components.weekOfMonth ?? 0
+        let day = components.day ?? 0
+        let hour = components.hour ?? 0
+        let minute = components.minute ?? 0
+
+        if month > 0 {
+            return String(format: "%d months ago", month)
+        } else if weeks > 0 {
+            return String(format: "%d weeks ago", weeks)
+        } else if day > 0 {
+            return String(format: "%d days ago", day)
+        } else if hour > 0 {
+            return String(format: "%d hour ago", hour)
+        } else if minute > 0 {
+            return String(format: "%d minute ago", minute)
+        } else {
+            return String(format: "Now", minute)
+        }
+    }
+    
     func toString(format: String = K.defaultDateFormat, isUTC: Bool = true) -> String? {
         let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
