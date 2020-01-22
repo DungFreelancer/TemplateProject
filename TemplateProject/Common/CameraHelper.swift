@@ -12,13 +12,19 @@ class CameraHelper: NSObject {
     
     static let shared = CameraHelper()
     
-    private override init() {}
+    private let picker = UIImagePickerController()
+    
+    private override init() {
+        super.init()
+        
+        self.picker.delegate = self
+    }
     
     private var complete: ((UIImage?)->())?
     
     private var cancel: (()->())?
     
-    func showCamera(on vc: UIViewController, complete: @escaping (UIImage?)->(), cancel: (()->())? = nil) {
+    func showPicker(on vc: UIViewController, complete: @escaping (UIImage?)->(), cancel: (()->())? = nil) {
 //        Add 2 keys into Info.plist:
 //        <key>NSCameraUsageDescription</key>
 //        <string>${PRODUCT_NAME} Camera Usage</string>
@@ -28,21 +34,32 @@ class CameraHelper: NSObject {
         self.complete = complete
         self.cancel = cancel
         
-        let picker = UIImagePickerController()
-        picker.delegate = self
-        
         AlertHelper.showActionSheet(on: vc, title: "Photo Source", message: nil, firstButton: "Camera", firstComplete: { (action: UIAlertAction) in
-            if UIImagePickerController.isSourceTypeAvailable(.camera) {
-                picker.sourceType = .camera
-                vc.present(picker, animated: true, completion: nil)
-            } else {
-                Log.e("Camera is not available!!!")
-                complete(nil)
-            }
+            self.showCamera(on: vc, complete: complete, cancel: cancel)
         }, secondButton: "Photo Library", secondComplete: { (action:UIAlertAction) in
-            picker.sourceType = .photoLibrary
-            vc.present(picker, animated: true, completion: nil)
+            self.showLibrary(on: vc, complete: complete, cancel: cancel)
         })
+    }
+    
+    func showCamera(on vc: UIViewController, complete: @escaping (UIImage?)->(), cancel: (()->())? = nil) {
+        self.complete = complete
+        self.cancel = cancel
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            self.picker.sourceType = .camera
+            vc.present(picker, animated: true, completion: nil)
+        } else {
+            Log.e("Camera is not available!!!")
+            complete(nil)
+        }
+    }
+    
+    func showLibrary(on vc: UIViewController, complete: @escaping (UIImage?)->(), cancel: (()->())? = nil) {
+        self.complete = complete
+        self.cancel = cancel
+        
+        self.picker.sourceType = .photoLibrary
+        vc.present(picker, animated: true, completion: nil)
     }
     
 }
@@ -59,12 +76,12 @@ extension CameraHelper: UIImagePickerControllerDelegate, UINavigationControllerD
         }
         
         picker.dismiss(animated: true, completion: nil)
-        self.complete!(image)
+        self.complete?(image)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
-        self.cancel!()
+        self.cancel?()
     }
     
 }

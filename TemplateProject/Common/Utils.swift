@@ -65,11 +65,21 @@ struct Utils {
     }
     
     static func object<T: Decodable>(from data: Data, type: T.Type) -> T? {
-        return try? JSONDecoder().decode(type, from: data)
+        do {
+            return try JSONDecoder().decode(type, from: data)
+        } catch {
+            Log.e(error)
+            return nil
+        }
     }
     
     static func data<T: Encodable>(from object: T) -> Data? {
-        return try? JSONEncoder().encode(object)
+        do {
+            return try JSONEncoder().encode(object)
+        } catch {
+            Log.e(error)
+            return nil
+        }
     }
     
 }

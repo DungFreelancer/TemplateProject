@@ -24,9 +24,22 @@ extension String {
         let date = dateFormatter.date(from: self)
         return date
     }
-
     
-    func uppercasedFirst() -> String {
+    func toMoney() -> String {
+        let currencyFormatter = NumberFormatter()
+        currencyFormatter.usesGroupingSeparator = true
+        currencyFormatter.numberStyle = .currency
+        // localize to your grouping and decimal separator
+        //currencyFormatter.locale = Locale.current
+        currencyFormatter.locale = Locale(identifier: "fr_FR")
+        
+        var priceString = currencyFormatter.string(from: NSNumber(value: Double(self) ?? 0))!
+        priceString.removeLast()
+        priceString.removeLast()
+        return priceString
+    }
+    
+    func uppercasedFirstLetter() -> String {
         return prefix(1).capitalized + dropFirst()
     }
     

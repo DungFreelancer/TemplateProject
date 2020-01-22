@@ -13,6 +13,7 @@
 		9A61271B2392828500BB5FE6 /* FirebaseSMSHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A61271A2392828500BB5FE6 /* FirebaseSMSHelper.swift */; };
 		9A61271D239282B600BB5FE6 /* TwitterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A61271C239282B600BB5FE6 /* TwitterHelper.swift */; };
 		9A94BCB620A0B6FA00A60DED /* UIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A94BCB520A0B6FA00A60DED /* UIViewEx.swift */; };
+		9A9B086D23D7EF3700AC58FD /* UINavigationControllerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B086C23D7EF3700AC58FD /* UINavigationControllerEx.swift */; };
 		9AB27A2C1F8BC524007BC150 /* HUDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB27A2B1F8BC524007BC150 /* HUDHelper.swift */; };
 		A00A48D422B8E62000361448 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00A48D322B8E62000361448 /* LocationHelper.swift */; };
 		A021C89922EE9D35000649BA /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A021C89822EE9D35000649BA /* FileHelper.swift */; };
@@ -47,6 +48,7 @@
 		9A61271A2392828500BB5FE6 /* FirebaseSMSHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseSMSHelper.swift; sourceTree = "<group>"; };
 		9A61271C239282B600BB5FE6 /* TwitterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterHelper.swift; sourceTree = "<group>"; };
 		9A94BCB520A0B6FA00A60DED /* UIViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewEx.swift; sourceTree = "<group>"; };
+		9A9B086C23D7EF3700AC58FD /* UINavigationControllerEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerEx.swift; sourceTree = "<group>"; };
 		9AB27A2B1F8BC524007BC150 /* HUDHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDHelper.swift; sourceTree = "<group>"; };
 		A00A48D322B8E62000361448 /* LocationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
 		A021C89822EE9D35000649BA /* FileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				A0D0479B22E1DB3D006A81D5 /* UILabelEx.swift */,
 				A0D0479C22E1DB3D006A81D5 /* UITextFieldEx.swift */,
 				9A6127182392811300BB5FE6 /* UIRefreshControlEx.swift */,
+				9A9B086C23D7EF3700AC58FD /* UINavigationControllerEx.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				E880D0A11F809F4F002EEB55 /* Utils.swift in Sources */,
 				A0CA6EDA22BB9FC200DA6ED4 /* GoogleHelper.swift in Sources */,
 				1846D4A523426164003CA96F /* CollectionEx.swift in Sources */,
+				9A9B086D23D7EF3700AC58FD /* UINavigationControllerEx.swift in Sources */,
 				18D1CF6A2323556C002B3E1F /* CameraHelper.swift in Sources */,
 				A0D0479F22E1DB3D006A81D5 /* UITextFieldEx.swift in Sources */,
 				A0D0479D22E1DB3D006A81D5 /* UIButtonEx.swift in Sources */,

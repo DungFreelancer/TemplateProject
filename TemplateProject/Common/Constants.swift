@@ -49,7 +49,7 @@ struct K {
     
     static let defaultDateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
     
-    static let defaultImageCompression: CGFloat = 5.0
+    static let defaultImageCompression: CGFloat = 0.5
     
     struct AppFont {
         static let Regular  = "SourceSansPro-Regular"

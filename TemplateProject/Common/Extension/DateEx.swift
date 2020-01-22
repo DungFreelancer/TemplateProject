@@ -64,7 +64,7 @@ extension Date {
         let startDay: Int = calendat.ordinality(of: .day, in: .era, for: startDate)!
         let endDay: Int = calendat.ordinality(of: .day, in: .era, for: endDate)!
         
-        // 0: today, 1: tomorrow, ...
+        // -1: yesterday, 0: today, 1: tomorrow, ...
         return endDay - startDay
     }
     
@@ -91,6 +91,17 @@ extension Date {
         } else {
             return String(format: "Now", minute)
         }
+    }
+    
+    static func timeLeft(time: TimeInterval) -> String {
+        let hours = Int(time) / 3600
+        let minutes = (Int(time) / 60) % 60
+        let seconds = Int(time) % 60
+        
+        if hours == 0 {
+            return String(format:"%02i:%02i", minutes, seconds)
+        }
+        return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
     }
     
     func toString(format: String = K.defaultDateFormat, isUTC: Bool = true) -> String? {
