@@ -22,46 +22,45 @@ class NetworkHelper {
     private init() {}
     
     func cancelAll() {
-        Alamofire.SessionManager.default.session.getAllTasks { (tasks) in
+        Alamofire.Session.default.session.getAllTasks { (tasks) in
             tasks.forEach{ $0.cancel() }
         }
     }
     
     func connectionStatusChange(_ isConnected: @escaping (Bool)->()) {
-        reachabilityManager?.listener = { status in
+        self.reachabilityManager?.startListening(onUpdatePerforming: { (status) in
             if (status != .unknown && status != .notReachable) {
                 isConnected(true)
             } else {
                 isConnected(false)
             }
-        }
-        reachabilityManager?.startListening()
+        })
     }
     
-    private func initHeaders(headers: Dictionary<String, String>?) -> Dictionary<String, String>? {
+    private func initHeaders(headers: Dictionary<String, String>?) -> HTTPHeaders? {
         if let headers = headers {
-            return headers
+            return HTTPHeaders(headers)
         }
 //        if let accessToken = K.accessToken {
-//            return ["Authorization" : accessToken]
+//            return HTTPHeaders(["Authorization" : accessToken])
 //        }
         return nil
     }
 
     
     func get<T: Decodable>(url: String, headers: Dictionary<String, String>? = nil, type: T.Type, complete:((_ data: T?,_ error: Error?)->())?) {
-        Alamofire.request(url, method: .get, encoding: JSONEncoding.default, headers: self.initHeaders(headers: headers)).responseJSON { (response) in
+        AF.request(url, method: .get, encoding: JSONEncoding.default, headers: self.initHeaders(headers: headers)).responseJSON { (response) in
             self.response(response, type: type, complete: complete)
         }
     }
     
     func post<T: Decodable>(url: String, params: Dictionary<String, Any>, headers: Dictionary<String, String>? = nil, type: T.Type, complete:((_ data: T?,_ error: Error?)->())?) {
-        Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: self.initHeaders(headers: headers)).responseJSON { (response) in
+        AF.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: self.initHeaders(headers: headers)).responseJSON { (response) in
             self.response(response, type: type, complete: complete)
         }
     }
     
-    private func response<T: Decodable>(_ response: DataResponse<Any>, type: T.Type, complete: ((_ data: T?,_ error: Error?)->())?) {
+    private func response<T: Decodable>(_ response: AFDataResponse<Any>, type: T.Type, complete: ((_ data: T?,_ error: Error?)->())?) {
         guard let complete = complete else {
             return
         }
@@ -76,33 +75,28 @@ class NetworkHelper {
     }
     
     func get(url: String, headers: Dictionary<String, String>? = nil, complete:((_ data: JSON?,_ error: Error?)->())?) {
-        Alamofire.request(url, method: .get, encoding: JSONEncoding.default, headers: self.initHeaders(headers: headers)).responseJSON { (response) in
+        AF.request(url, method: .get, encoding: JSONEncoding.default, headers: self.initHeaders(headers: headers)).responseJSON { (response) in
             self.response(response, complete: complete)
         }
     }
     
     func post(url: String, params: Dictionary<String, Any>, headers: Dictionary<String, String>? = nil, complete:((_ data: JSON?,_ error: Error?)->())?) {
-        Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: self.initHeaders(headers: headers)).responseJSON { (response) in
+        AF.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: self.initHeaders(headers: headers)).responseJSON { (response) in
             self.response(response, complete: complete)
         }
     }
     
-    func upload(_ data: Data, to url: String, headers: Dictionary<String, String>? = nil, complete:((_ data: JSON?,_ error: Error?)->())?) {
-        Alamofire.upload(multipartFormData: { (multipartFormData) in
-            multipartFormData.append(data, withName: "image", fileName: "image.png", mimeType: "image/png")
-        }, usingThreshold: UInt64.init(), to: url, method: .post, headers: self.initHeaders(headers: headers)) { (result) in
-            switch result {
-            case .success(let upload, _, _):
-                upload.responseJSON(completionHandler: { (response) in
-                    self.response(response, complete: complete)
-                })
-            case .failure(let error):
-                complete!(nil, error)
+    func upload(_ arrData: [Data], to url: String, headers: Dictionary<String, String>? = nil, complete:((_ data: JSON?,_ error: Error?)->())?) {
+        AF.upload(multipartFormData: { (multipartFormData) in
+            for i in 0 ..< arrData.count {
+                multipartFormData.append(arrData[i], withName: "image", fileName: "image\(i).png", mimeType: "image/png")
             }
+        }, to: url, usingThreshold: UInt64.init(), method: .post, headers: self.initHeaders(headers: headers)).responseJSON { (response) in
+            self.response(response, complete: complete)
         }
     }
     
-    private func response(_ response: DataResponse<Any>, complete: ((_ data: JSON?,_ error: Error?)->())?) {
+    private func response(_ response: AFDataResponse<Any>, complete: ((_ data: JSON?,_ error: Error?)->())?) {
         guard let complete = complete else {
             return
         }
