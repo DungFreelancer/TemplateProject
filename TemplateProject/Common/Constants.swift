@@ -47,6 +47,27 @@ struct K {
         }
     }
     
+    static var currentLanguage: Language {
+        set {
+            K.userDefault.set(newValue.rawValue, forKey: K.Keys.CurrentLanguage)
+        }
+        get {
+            if let lang = K.userDefault.string(forKey: K.Keys.CurrentLanguage) {
+                return Language(rawValue: lang) ?? .english
+            } else {
+                return .english
+            }
+        }
+    }
+    
+    enum Language: String {
+        case english    = "en"
+        case french     = "fr"
+        case spanish    = "es"
+        case russian    = "ru"
+        case italian    = "it"
+    }
+    
     static let defaultDateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
     
     static let defaultImageCompression: CGFloat = 0.5
@@ -64,6 +85,7 @@ struct K {
     
     struct Keys {
         static let isLaunchedBefore = "isLaunchedBefore"
+        static let CurrentLanguage  = "CurrentLanguage"
     }
     
     struct URLs {

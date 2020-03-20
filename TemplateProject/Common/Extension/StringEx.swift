@@ -11,7 +11,12 @@ import Foundation
 extension String {
     
     var localized: String {
-        return NSLocalizedString(self, comment: "")
+        if let path = Bundle.main.path(forResource: K.currentLanguage.rawValue, ofType: "lproj") {
+            return Bundle(path: path)!.localizedString(forKey: self, value: nil, table: nil)
+        } else {
+            Log.e("Can't found \(K.currentLanguage.rawValue) language!!!")
+            return NSLocalizedString(self, comment: "")
+        }
     }
     
     func trim() -> String {
