@@ -1,4 +1,4 @@
-platform :ios, '12.0'
+platform :ios, '13.0'
 use_frameworks!
 
 target 'TemplateProject' do
@@ -13,5 +13,4 @@ target 'TemplateProject' do
   pod 'GoogleSignIn'
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
-  pod 'TwitterKit'
 end

@@ -112,9 +112,6 @@ PODS:
   - PKHUD (5.3.0)
   - PromisesObjC (1.2.9)
   - SwiftyJSON (5.0.0)
-  - TwitterCore (3.2.0)
-  - TwitterKit (3.4.2):
-    - TwitterCore (>= 3.2.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -127,7 +124,6 @@ DEPENDENCIES:
   - Kingfisher
   - PKHUD
   - SwiftyJSON
-  - TwitterKit
 
 SPEC REPOS:
   trunk:
@@ -156,8 +152,6 @@ SPEC REPOS:
     - PKHUD
     - PromisesObjC
     - SwiftyJSON
-    - TwitterCore
-    - TwitterKit
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
@@ -185,9 +179,7 @@ SPEC CHECKSUMS:
   PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
   PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
-  TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
-  TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
 
-PODFILE CHECKSUM: b89a6686968384b58f27052bb7b6f76892ce602a
+PODFILE CHECKSUM: c6c21f3390ca0fa55d50686a450a40b27d019345
 
 COCOAPODS: 1.9.3

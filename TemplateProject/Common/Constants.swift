@@ -24,7 +24,7 @@ struct K {
     
     static let isIphoneX: Bool = K.appDelegate.window!.safeAreaInsets.top > 20.0
     
-    static let isLandscape: Bool = UIApplication.shared.statusBarOrientation.isLandscape
+    static let isLandscape: Bool = UIApplication.shared.windows.first?.windowScene?.interfaceOrientation.isLandscape ?? false
     
     static let isSimulator: Bool = Bool(exactly: TARGET_OS_SIMULATOR as NSNumber)!
     
