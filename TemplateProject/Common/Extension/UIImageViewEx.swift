@@ -32,9 +32,6 @@ extension UIImageView {
                 case .success(_):
                     complete!(true, nil)
                 case .failure(let error):
-                    if !error.isTaskCancelled {
-                        Log.e(error.errorDescription ?? error.localizedDescription)
-                    }
                     complete?(false, error.errorDescription)
                 }
             }
