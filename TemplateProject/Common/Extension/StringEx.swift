@@ -6,7 +6,7 @@
 //  Copyright © 2017 HD. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension String {
     
@@ -46,6 +46,13 @@ extension String {
     
     func uppercasedFirstLetter() -> String {
         return prefix(1).capitalized + dropFirst()
+    }
+    
+    func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
+        let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
+        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [.font : font], context: nil)
+        
+        return ceil(boundingBox.height)
     }
     
 }
