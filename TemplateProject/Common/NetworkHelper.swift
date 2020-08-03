@@ -16,7 +16,7 @@ class NetworkHelper {
     private let reachabilityManager = NetworkReachabilityManager()
     
     var isConnect: Bool? {
-        return NetworkReachabilityManager()?.isReachable
+        return self.reachabilityManager?.isReachable
     }
     
     private init() {}
