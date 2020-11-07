@@ -11,6 +11,7 @@
 		18D1CF6A2323556C002B3E1F /* CameraHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1CF692323556C002B3E1F /* CameraHelper.swift */; };
 		9A6127192392811300BB5FE6 /* UIRefreshControlEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6127182392811300BB5FE6 /* UIRefreshControlEx.swift */; };
 		9A61271B2392828500BB5FE6 /* FirebaseSMSHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A61271A2392828500BB5FE6 /* FirebaseSMSHelper.swift */; };
+		9A8B840C2556856400F6EC38 /* AppleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8B840B2556856400F6EC38 /* AppleHelper.swift */; };
 		9A94BCB620A0B6FA00A60DED /* UIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A94BCB520A0B6FA00A60DED /* UIViewEx.swift */; };
 		9A9B086D23D7EF3700AC58FD /* UINavigationControllerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B086C23D7EF3700AC58FD /* UINavigationControllerEx.swift */; };
 		9AB27A2C1F8BC524007BC150 /* HUDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB27A2B1F8BC524007BC150 /* HUDHelper.swift */; };
@@ -43,6 +44,7 @@
 		8BA573B5AC986056DB03586C /* Pods_TemplateProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TemplateProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A6127182392811300BB5FE6 /* UIRefreshControlEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRefreshControlEx.swift; sourceTree = "<group>"; };
 		9A61271A2392828500BB5FE6 /* FirebaseSMSHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseSMSHelper.swift; sourceTree = "<group>"; };
+		9A8B840B2556856400F6EC38 /* AppleHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleHelper.swift; sourceTree = "<group>"; };
 		9A94BCB520A0B6FA00A60DED /* UIViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewEx.swift; sourceTree = "<group>"; };
 		9A9B086C23D7EF3700AC58FD /* UINavigationControllerEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerEx.swift; sourceTree = "<group>"; };
 		9AB27A2B1F8BC524007BC150 /* HUDHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDHelper.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				A00A48D322B8E62000361448 /* LocationHelper.swift */,
 				A096529822BB457900FFABD3 /* FacebookHelper.swift */,
 				A0CA6ED922BB9FC200DA6ED4 /* GoogleHelper.swift */,
+				9A8B840B2556856400F6EC38 /* AppleHelper.swift */,
 				A021C89822EE9D35000649BA /* FileHelper.swift */,
 				18D1CF692323556C002B3E1F /* CameraHelper.swift */,
 				9A61271A2392828500BB5FE6 /* FirebaseSMSHelper.swift */,
@@ -390,6 +393,7 @@
 				E880D09B1F807803002EEB55 /* Log.swift in Sources */,
 				A00A48D422B8E62000361448 /* LocationHelper.swift in Sources */,
 				E880D09F1F808D5E002EEB55 /* Constants.swift in Sources */,
+				9A8B840C2556856400F6EC38 /* AppleHelper.swift in Sources */,
 				A021C89922EE9D35000649BA /* FileHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,6 +536,7 @@
 			baseConfigurationReference = BAB76CFD7309A3C94DCD59DA /* Pods-TemplateProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TemplateProject/TemplateProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F98RZJGZVS;
 				INFOPLIST_FILE = "$(SRCROOT)/TemplateProject/Supporting Files/Info.plist";
@@ -549,6 +554,7 @@
 			baseConfigurationReference = 3C07B82D8CE755958618B85F /* Pods-TemplateProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TemplateProject/TemplateProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F98RZJGZVS;
 				INFOPLIST_FILE = "$(SRCROOT)/TemplateProject/Supporting Files/Info.plist";
