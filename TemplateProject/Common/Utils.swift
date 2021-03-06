@@ -12,19 +12,6 @@ struct Utils {
     
     private init() {}
     
-    static func appVersion() -> String {
-        return Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
-    }
-    
-    static func appBuild() -> String {
-        return Bundle.main.object(forInfoDictionaryKey: kCFBundleVersionKey as String) as! String
-    }
-    
-    static func versionBuild() -> String {
-        let version = appVersion(), build = appBuild()
-        return "v\(version)(\(build))"
-    }
-    
     static func removePersisDomain() {
         let appDomain: String = Bundle.main.bundleIdentifier!
         K.userDefault.removePersistentDomain(forName: appDomain)

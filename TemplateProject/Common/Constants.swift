@@ -30,12 +30,24 @@ struct K {
     
     static let deviceID: String? = UIDevice.current.identifierForVendor?.uuidString
     
-    static var iOS: Int {
-        get {
-            let currentOS = UIDevice.current.systemVersion
-            let index = currentOS.firstIndex(of: ".") ?? currentOS.endIndex
-            return Int(currentOS[..<index])!
+    static var OS: String = UIDevice.current.systemVersion
+    
+    static var OSVersion: String = UIDevice.current.systemName
+    
+    static var model: String {
+        var systemInfo = utsname()
+        uname(&systemInfo)
+        let machineMirror = Mirror(reflecting: systemInfo.machine)
+        return machineMirror.children.reduce("") { identifier, element in
+            guard let value = element.value as? Int8, value != 0 else { return identifier }
+            return identifier + String(UnicodeScalar(UInt8(value)))
         }
+    }
+    
+    static var appVersion: String {
+        let version = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
+        let build = Bundle.main.infoDictionary!["CFBundleVersion"] as! String
+        return "\(version)(\(build))"
     }
     
     static var isLaunchedBefore: Bool {
